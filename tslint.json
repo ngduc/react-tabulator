@@ -1,0 +1,19 @@
+{
+  "defaultSeverity": "warning",
+  "extends": ["tslint-config-airbnb", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules/**", "build/**"]
+  },
+  "jsRules": {
+    "curly": true,
+    "no-console": false
+  },
+  "rules": {
+    "curly": true,
+    "no-console": false,
+    "member-access": false,
+    "import-name": false,
+    "jsx-no-lambda": false
+  },
+  "rulesDirectory": []
+}

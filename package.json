@@ -1,0 +1,62 @@
+{
+  "name": "react-tabulator",
+  "version": "0.3.4",
+  "description": "React Tabulator component",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc --outDir ./lib --jsx react ./src/index.tsx && npm run postbuild",
+    "postbuild": "cp ./src/styles.css ./lib/",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo --port 3003",
+    "dev": "concurrently --kill-others \"npm run dev:watch\" \"npm run start\"",
+    "dev:watch": "tsc --outDir ./lib --jsx react --watch ./src/index.tsx",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server",
+    "demo": "nwb react run demo/src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ngduc@github.com/ngduc/react-tabulator.git"
+  },
+  "keywords": [
+    "react",
+    "tabulator",
+    "table"
+  ],
+  "author": "Duc Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngduc/react-tabulator/issues"
+  },
+  "homepage": "https://github.com/ngduc/react-tabulator#readme",
+  "dependencies": {
+    "pick-react-known-prop": "^0.1.5",
+    "tabulator-tables": "^4.0.4"
+  },
+  "peerDependencies": {
+    "react": "16.x"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.9",
+    "awesome-typescript-loader": "^5.2.1",
+    "concurrently": "^4.0.1",
+    "nwb": "0.23.x",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.0.3"
+  }
+}
