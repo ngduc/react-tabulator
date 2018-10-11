@@ -17,6 +17,13 @@ const data = [
   { id: 7, name: 'Duc Ng', age: '37', col: 'yellow', dob: '10/15/1982' }
 ];
 
+const editableColumns = [
+  { title: 'Name', field: 'name', width: 150, editor: 'input' },
+  { title: 'Age', field: 'age', align: 'left', formatter: 'progress', editor: 'progress' },
+  { title: 'Favourite Color', field: 'col', editor: 'input' },
+  { title: 'Date Of Birth', field: 'dob', align: 'center', editor: 'input' }
+];
+
 interface IProps {
   data: any[];
 }
@@ -30,21 +37,23 @@ export default class extends React.Component<IProps> {
   };
 
   render() {
+    const options = {
+      height: 150,
+      resizableRows: true
+    };
     return (
       <div>
         <ReactTabulator
           ref={ref => (this.ref = ref)}
-          height={150}
           columns={columns}
           data={data}
-          tableBuilt={() => console.log('tableBuilt')}
           rowClick={this.rowClick}
-          rowDblClick={() => console.log('rowDblClick')}
-          dataSorted={() => console.log('dataSorted')}
-          options={{ resizableRows: true }}
+          options={options}
           data-custom-attr="test-custom-attribute"
           className="custom-css-class"
         />
+        <h3>Editable Table</h3>
+        <ReactTabulator columns={editableColumns} data={data} />
       </div>
     );
   }
