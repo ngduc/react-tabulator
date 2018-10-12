@@ -30,7 +30,8 @@
   "keywords": [
     "react",
     "tabulator",
-    "table"
+    "table",
+    "component"
   ],
   "author": "Duc Nguyen",
   "license": "MIT",
