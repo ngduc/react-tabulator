@@ -31,7 +31,13 @@ Require: `NodeJS v8.12.0 +` and `yarn` (optional)
 ```
 $ npm run dev      Launch DEV mode
 $ npm run build    Make a build
+
+$ yarn test        Run unit tests
 ```
+
+### 🙌 Documentation
+
+[Change Log](/CHANGELOG.md)
 
 ### 🙌 Thanks
 
