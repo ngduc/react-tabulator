@@ -4,7 +4,7 @@
 
 React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
 
-- Live Demo: [Codesandbox](https://codesandbox.io/s/y3pllw3oj9)
+- Live Demo: [Codesandbox](https://codesandbox.io/s/oxmj02v696)
 
 ### 🌟 Features
 
