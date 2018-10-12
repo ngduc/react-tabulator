@@ -1,5 +1,7 @@
 # react-tabulator
 
+[![Build Status](https://travis-ci.org/ngduc/react-tabulator.svg?branch=master)](https://travis-ci.org/ngduc/react-tabulator)
+
 React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
 
 - Live Demo: [Codesandbox](https://codesandbox.io/s/y3pllw3oj9)
