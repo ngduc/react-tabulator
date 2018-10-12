@@ -5,23 +5,27 @@ const columns = [
   { title: 'Name', field: 'name', width: 150 },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress' },
   { title: 'Favourite Color', field: 'col' },
-  { title: 'Date Of Birth', field: 'dob', align: 'center' }
+  { title: 'Date Of Birth', field: 'dob', align: 'center' },
+  { title: 'Rating', field: 'rating', align: 'center', formatter: 'star' },
+  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' }
 ];
 const data = [
-  { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '' },
-  { id: 2, name: 'Mary May', age: '1', col: 'blue', dob: '14/05/1989' },
-  { id: 3, name: 'Christine Lobowski', age: '42', col: 'green', dob: '22/05/1985' },
-  { id: 4, name: 'Brendon Philips', age: '125', col: 'orange', dob: '01/08/1980' },
-  { id: 5, name: 'Margret Marmajuke', age: '16', col: 'yellow', dob: '31/01/1999' },
-  { id: 6, name: 'Van Ng', age: '37', col: 'green', dob: '06/15/1982' },
-  { id: 7, name: 'Duc Ng', age: '37', col: 'yellow', dob: '10/15/1982' }
+  { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '', rating: 5, passed: true },
+  { id: 2, name: 'Mary May', age: '1', col: 'blue', dob: '14/05/1989', rating: 4, passed: true },
+  { id: 3, name: 'Christine Lobowski', age: '42', col: 'green', dob: '22/05/1985', rating: 4, passed: false },
+  { id: 4, name: 'Brendon Philips', age: '125', col: 'orange', dob: '01/08/1980', rating: 4.5, passed: true },
+  { id: 5, name: 'Margret Marmajuke', age: '16', col: 'yellow', dob: '31/01/1999', rating: 4, passed: false },
+  { id: 6, name: 'Van Ng', age: '37', col: 'green', dob: '06/15/1982', rating: 4, passed: true },
+  { id: 7, name: 'Duc Ng', age: '37', col: 'yellow', dob: '10/15/1982', rating: 4, passed: true }
 ];
 
 const editableColumns = [
-  { title: 'Name', field: 'name', width: 150, editor: 'input' },
+  { title: 'Name', field: 'name', width: 150, editor: 'input', headerFilter: 'input' },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress', editor: 'progress' },
   { title: 'Favourite Color', field: 'col', editor: 'input' },
-  { title: 'Date Of Birth', field: 'dob', align: 'center', editor: 'input' }
+  { title: 'Date Of Birth', field: 'dob', align: 'center', editor: 'input' },
+  { title: 'Rating', field: 'rating', align: 'center', formatter: 'star', editor: true },
+  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
 ];
 
 interface IProps {
@@ -39,7 +43,7 @@ export default class extends React.Component<IProps> {
   render() {
     const options = {
       height: 150,
-      resizableRows: true
+      movableRows: true
     };
     return (
       <div>
@@ -54,6 +58,16 @@ export default class extends React.Component<IProps> {
         />
         <h3>Editable Table</h3>
         <ReactTabulator columns={editableColumns} data={data} />
+        <p>
+          <a href="https://github.com/ngduc/react-tabulator" target="_blank">
+            Back to: Github Repo: react-tabulator
+          </a>
+        </p>
+        <p>
+          <a href="http://tabulator.info/examples/4.0" target="_blank">
+            More Tabulator's Examples
+          </a>
+        </p>
       </div>
     );
   }

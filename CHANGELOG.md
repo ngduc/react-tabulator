@@ -1,4 +1,4 @@
-## [0.4.1] - 2018-10-11
+## [0.4.2] - 2018-10-11
 
 ### Added
 - ConfigUtils.tsx to handle props and options.
