@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { pickHTMLProps } from 'pick-react-known-prop';
-import { IProps, getCallbacks } from './ConfigUtils';
+import { IProps, propsToOptions } from './ConfigUtils';
 
 /* tslint:disable-next-line */
 const Tabulator = require('tabulator-tables');
@@ -22,10 +22,11 @@ export default class extends React.Component<IProps> {
     const domEle: any = ReactDOM.findDOMNode(this.ref); // mounted DOM element
     const that = this;
     const { columns, data, options } = this.props;
-    const callbacks = getCallbacks(this.props);
-    const table = new Tabulator(domEle, {
+    const propOptions = propsToOptions(this.props);
+
+    new Tabulator(domEle, {
       columns,
-      ...callbacks,
+      ...propOptions,
       layout: 'fitColumns', // fit columns to width of table (optional)
       tableBuilding() {
         that.table = this; // keep table instance
@@ -33,9 +34,13 @@ export default class extends React.Component<IProps> {
           that.props.tableBuilding();
         }
       },
-      ...options
+      dataLoaded() {
+        that.props.dataLoaded ? that.props.dataLoaded() : '';
+      },
+      ...options,
+      data
     });
-    table.setData(data);
+    // await table.setData(data);
   }
 
   componentWillUnmount() {
