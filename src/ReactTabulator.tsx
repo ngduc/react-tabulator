@@ -30,9 +30,7 @@ export default class extends React.Component<IProps> {
       layout: 'fitColumns', // fit columns to width of table (optional)
       tableBuilding() {
         that.table = this; // keep table instance
-        if (that.props.tableBuilding) {
-          that.props.tableBuilding();
-        }
+        that.props.tableBuilding ? that.props.tableBuilding() : '';
       },
       dataLoaded() {
         that.props.dataLoaded ? that.props.dataLoaded() : '';
