@@ -1,3 +1,8 @@
+## [0.4.7] - 2018-10-13
+
+### Changed
+- switch to jest-puppeteer because enzyme couldn't render tabulator data. (got empty grid)
+
 ## [0.4.5] - 2018-10-11
 
 ### Added

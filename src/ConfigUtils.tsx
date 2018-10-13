@@ -108,7 +108,7 @@ export interface IProps {
 }
 
 // get callbacks from props (default: NOOP) & set them to Tabulator options
-export const getCallbacks = (props: any) => {
+export const propsToOptions = (props: any) => {
   const output: any = {}
 
   const defaultOptions = ['height', 'layout', 'layoutColumnsOnNewData', 'columnMinWidth', 'columnVertAlign',
