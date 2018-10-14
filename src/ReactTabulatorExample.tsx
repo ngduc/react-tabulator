@@ -33,11 +33,18 @@ interface IProps {
 }
 
 export default class extends React.Component<IProps> {
+  state: any = {
+    data: []
+  };
   ref: any = null;
 
   rowClick = (e: any, row: any) => {
     console.log('ref table: ', this.ref.table); // this is the Tabulator table instance
     console.log('rowClick id: ${row.getData().id}', row, e);
+  };
+
+  setData = () => {
+    this.setState({ data });
   };
 
   render() {
@@ -56,8 +63,15 @@ export default class extends React.Component<IProps> {
           data-custom-attr="test-custom-attribute"
           className="custom-css-class"
         />
+
+        <h3>
+          Asynchronous data loading: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>
+        </h3>
+        <ReactTabulator columns={columns} data={this.state.data} />
+
         <h3>Editable Table</h3>
         <ReactTabulator columns={editableColumns} data={data} />
+
         <p>
           <a href="https://github.com/ngduc/react-tabulator" target="_blank">
             Back to: Github Repo: react-tabulator
