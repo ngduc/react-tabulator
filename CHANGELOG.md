@@ -1,5 +1,7 @@
-## [0.4.8] - 2018-10-13
+## [0.4.9] - 2018-10-13
 
+### Added
+- `__tests__/ui` - UI for tests.
 ### Changed
 - switch to jest-puppeteer because enzyme couldn't render tabulator data. (got empty grid)
 

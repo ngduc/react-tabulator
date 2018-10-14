@@ -5,11 +5,6 @@ dist: trusty
 addons:
   chrome: stable
 
-cache:
-  yarn: true
-  directories:
-    - node_modules
-
 git:
   depth: 3
 
