@@ -12,7 +12,7 @@ try {
 // if UI is not up => start UI
 const server = !isServerUp
   ? {
-      command: 'npm run start',
+      command: 'npm run start-test-ui',
       port: 3003
     }
   : {};
