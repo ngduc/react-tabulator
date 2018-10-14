@@ -6,6 +6,8 @@ React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
 
 - Live Demo: [Codesandbox](https://codesandbox.io/s/oxmj02v696)
 
+[![Screenshot](screenshot.png)](https://codesandbox.io/s/oxmj02v696)
+
 ### 🌟 Features
 
 Tabulator's features plus:
@@ -37,7 +39,7 @@ $ npm run build    Make a build
 $ yarn test        Run tests using jest-puppeteer (with headless Chrome)
 ```
 
-### 🙌 Documentation
+### 📖 Documentation
 
 [Change Log](/CHANGELOG.md)
 

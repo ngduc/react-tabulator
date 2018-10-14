@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import './styles.css';
 
 import '../../src/styles.css';
 // import { ReactTabulator, ReactTabulatorExample } from '../../lib';
