@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ngduc/react-tabulator.svg?branch=master)](https://travis-ci.org/ngduc/react-tabulator)
 
-React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
+React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator) - an advanced table library with many useful features.
 
 - Live Demo: [Codesandbox](https://codesandbox.io/s/oxmj02v696)
 
@@ -14,6 +14,7 @@ Tabulator's features plus:
 - React 16.5.x
 - Typescript 3.x
 - Tslint
+- Jest-puppeteer for testing
 
 ### 📦 Usage
 
@@ -26,7 +27,7 @@ import { ReactTabulator } from 'react-tabulator';
 <ReactTabulator data={data} />
 ```
 
-- Code Example: [/demo/src/index.js](/demo/src/index.js)
+- Code Example: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
 
 ### 🔧 Commands
 
