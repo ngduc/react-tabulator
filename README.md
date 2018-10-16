@@ -12,6 +12,7 @@ React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
 
 Tabulator's features plus:
 - React 16.5.x
+  - For React 15.x - use [this branch](https://github.com/ngduc/react-tabulator/tree/use-react-15)
 - Typescript 3.x
 - Tslint
 - Jest-puppeteer for testing
@@ -28,6 +29,12 @@ import { ReactTabulator } from 'react-tabulator';
 ```
 
 - Code Example: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
+
+```
+For React 15.x, install it using this branch:
+
+$ npm install git://github.com/ngduc/react-tabulator.git#use-react-15 --save
+```
 
 ### 🔧 Commands
 
