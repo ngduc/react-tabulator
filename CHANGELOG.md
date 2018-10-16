@@ -1,7 +1,8 @@
-## [0.5.0] - 2018-10-14
+## [0.5.5] - 2018-10-14
 
 ### Added
 - `__tests__/ui` - UI for tests.
+- `src/css` - css files for themes.
 ### Changed
 - use getDerivedStateFromProps so we can set grid data from state. (updated Examples)
 - switch to jest-puppeteer because enzyme couldn't render tabulator data. (got empty grid)
