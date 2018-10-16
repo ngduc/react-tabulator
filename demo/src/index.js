@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './styles.css';
 
-import '../../src/styles.css';
-// import { ReactTabulator, ReactTabulatorExample } from '../../lib';
+// import '../../lib/styles.css'; // default Theme
 import { ReactTabulatorExample } from '../../lib';
+
+import '../../lib/css/bootstrap/tabulator_bootstrap.min.css'; // use Theme(s)
+// import { ReactTabulator, ReactTabulatorExample } from '../../lib';
 
 class Demo extends Component {
   render() {

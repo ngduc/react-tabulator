@@ -22,7 +22,7 @@ Tabulator's features plus:
 ```JS
 $ npm install react-tabulator
 
-import 'react-tabulator/lib/styles.css';
+import 'react-tabulator/lib/styles.css'; // default theme
 import { ReactTabulator } from 'react-tabulator';
 
 <ReactTabulator data={data} />

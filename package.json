@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.5.1",
+  "version": "0.5.5",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "npm run clean && tsc --outDir ./lib --jsx react ./src/index.tsx && npm run postbuild",
-    "postbuild": "cp ./src/styles.css ./lib/",
+    "postbuild": "cp ./src/styles.css ./lib/ && cp -R ./src/css ./lib",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo --port 3003",
