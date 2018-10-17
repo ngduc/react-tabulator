@@ -6,6 +6,19 @@ import { IProps, propsToOptions } from './ConfigUtils';
 /* tslint:disable-next-line */
 const Tabulator = require('tabulator-tables');
 
+function isSameArray(a: any[], b: any[]) {
+  let i = a.length;
+  if (i !== b.length) {
+    return false;
+  }
+  while (i--) {
+    if (a[i] !== b[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
 interface IState {
   data: any[];
 }
@@ -64,8 +77,11 @@ export default class extends React.Component<IProps, Partial<IState>> {
       // console.log('(data = [])');
       return null;
     }
-    if (state && props.data.length > 0) {
-      return { ...state, data: props.data }; // this triggers componentDidUpdate
+    if (state && props.data) {
+      // this triggers componentDidUpdate
+      if (!isSameArray(state.data, props.data)) {
+        return { ...state, data: props.data };
+      }
     }
     return {};
   }
@@ -80,6 +96,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
 
   // componentDidUpdate(prevProps, prevState)
   componentDidUpdate() {
+    // console.log('- componentDidUpdate');
     this.table.setData(this.state.data);
   }
 

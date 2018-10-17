@@ -55,6 +55,9 @@ export default class extends React.Component<IProps> {
   setData = () => {
     this.setState({ data });
   };
+  clearData = () => {
+    this.setState({ data: [] });
+  };
 
   render() {
     const options = {
@@ -74,7 +77,8 @@ export default class extends React.Component<IProps> {
         />
 
         <h3>
-          Asynchronous data loading: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>
+          Asynchronous data: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>{' '}
+          <button onClick={this.clearData}>Clear</button>
         </h3>
         <ReactTabulator columns={columns} data={this.state.data} />
 
