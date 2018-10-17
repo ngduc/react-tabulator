@@ -64,40 +64,12 @@ export default class extends React.Component<IProps, Partial<IState>> {
     this.table.destroy();
   }
 
-  // React 16.5.x - "getDerivedStateFromProps" replaces both "componentWillMount" & "componentWillReceiveProps"
-  // This function will be ignored when running with React 15.6.x
-  static getDerivedStateFromProps(props: any, state: any): any {
-    // console.log('- getDerivedStateFromProps', props, state);
-    const noData = !props.data || props.data.length === 0;
-    if (!state && noData) {
-      // first time (similar to: componentWillMount)
-      return null;
-    }
-    if (state && state.data.length === 0 && props.data.length === 0) {
-      // console.log('(data = [])');
-      return null;
-    }
-    if (state && props.data) {
-      // this triggers componentDidUpdate
-      if (!isSameArray(state.data, props.data)) {
-        return { ...state, data: props.data };
-      }
-    }
-    return {};
-  }
-
   // this is for React 15.x only, will not be triggered with React 16.5.x
   componentWillReceiveProps(props: IProps) {
-    console.log('- componentWillReceiveProps');
-    if (props.data.length > 0) {
+    // console.log('- componentWillReceiveProps');
+    if (!isSameArray(this.state.data, props.data)) {
       this.setState({ data: props.data });
     }
-  }
-
-  // componentDidUpdate(prevProps, prevState)
-  componentDidUpdate() {
-    // console.log('- componentDidUpdate');
-    this.table.setData(this.state.data);
   }
 
   pickValidHTMLProps = () => {

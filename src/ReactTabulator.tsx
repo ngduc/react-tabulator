@@ -86,14 +86,6 @@ export default class extends React.Component<IProps, Partial<IState>> {
     return {};
   }
 
-  // this is for React 15.x only, will not be triggered with React 16.5.x
-  // componentWillReceiveProps(props: IProps) {
-  //   console.log('- componentWillReceiveProps');
-  //   if (props.data.length > 0) {
-  //     this.setState({ data: props.data });
-  //   }
-  // }
-
   // componentDidUpdate(prevProps, prevState)
   componentDidUpdate() {
     // console.log('- componentDidUpdate');
