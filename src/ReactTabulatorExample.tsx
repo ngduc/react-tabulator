@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactTabulator from './ReactTabulator';
+import React15Tabulator from './React15Tabulator';
 
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
@@ -66,7 +66,7 @@ export default class extends React.Component<IProps> {
     };
     return (
       <div>
-        <ReactTabulator
+        <React15Tabulator
           ref={ref => (this.ref = ref)}
           columns={columns}
           data={data}
@@ -80,10 +80,10 @@ export default class extends React.Component<IProps> {
           Asynchronous data: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>{' '}
           <button onClick={this.clearData}>Clear</button>
         </h3>
-        <ReactTabulator columns={columns} data={this.state.data} />
+        <React15Tabulator columns={columns} data={this.state.data} />
 
         <h3>Editable Table</h3>
-        <ReactTabulator columns={editableColumns} data={data} />
+        <React15Tabulator columns={editableColumns} data={data} />
 
         <p>
           <a href="https://github.com/ngduc/react-tabulator" target="_blank">
