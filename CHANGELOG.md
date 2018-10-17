@@ -1,9 +1,9 @@
-## [0.5.8] - 2018-10-14
+## [0.5.10] - 2018-10-14
 
 ### Added
 - `__tests__/ui` - UI for tests.
 - `src/css` - css files for themes.
-- `use-react-15` branch for React 15.x
+- `use-react-15` branch for React 15.x and `src/React15Tabulator.tsx`
 ### Changed
 - use getDerivedStateFromProps so we can set grid data from state. (updated Examples)
 - switch to jest-puppeteer because enzyme couldn't render tabulator data. (got empty grid)

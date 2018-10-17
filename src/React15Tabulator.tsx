@@ -64,11 +64,13 @@ export default class extends React.Component<IProps, Partial<IState>> {
     this.table.destroy();
   }
 
-  // this is for React 15.x only, will not be triggered with React 16.5.x
+  // this is for React 15.x only
   componentWillReceiveProps(props: IProps) {
-    // console.log('- componentWillReceiveProps');
     if (!isSameArray(this.state.data, props.data)) {
-      this.setState({ data: props.data });
+      // console.log('- componentWillReceiveProps');
+      this.setState({ data: props.data }, () => {
+        this.table.setData(this.state.data);
+      });
     }
   }
 
