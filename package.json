@@ -49,8 +49,8 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "@types/react": "^16.4.14",
-    "@types/react-dom": "^16.0.9",
+    "@types/react": "^15.6.2",
+    "@types/react-dom": "^15.5.8",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
@@ -62,8 +62,8 @@
     "jest-puppeteer": "^3.4.0",
     "nwb": "0.23.x",
     "puppeteer": "^1.9.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
