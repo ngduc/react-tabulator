@@ -23,18 +23,13 @@ Tabulator's features plus:
 $ npm install react-tabulator
 
 import 'react-tabulator/lib/styles.css'; // default theme
-import { ReactTabulator } from 'react-tabulator';
+import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import { React15Tabulator }
 
 <ReactTabulator data={data} />
 ```
 
 - Code Example: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
-
-```
-For React 15.x, install it using this branch:
-
-$ npm install git://github.com/ngduc/react-tabulator.git#use-react-15 --save
-```
+- Code Example (React 15.x): [Codesandbox](https://codesandbox.io/s/oxmj02v696)
 
 ### 🔧 Commands
 
