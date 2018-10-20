@@ -12,9 +12,9 @@ React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
 
 Tabulator's features:
 ```
-  Filters      Sorting      Formatting    Grouping      Ajax    Editing    Virtualization
-  Pagination   Themes       A11y          I18n    Layouts       Frozen Cols/Rows
-  Key Binding  Responsive   Persisting    History       Calc    Validation
+  Filters      Sorting      Formatting    Grouping      Ajax      Editing    Virtualization
+  Pagination   Themes       A11y          I18n          Layouts   Frozen Cols/Rows
+  Key Binding  Responsive   Persisting    History       Calc      Validation
   Clipboard    Nested Tables
 ```
 
