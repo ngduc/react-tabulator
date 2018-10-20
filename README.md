@@ -10,12 +10,22 @@ React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator)
 
 ### 🌟 Features
 
-Tabulator's features plus:
+Tabulator's features:
+```
+  Filters      Sorting      Formatting    Grouping      Ajax    Editing    Virtualization
+  Pagination   Themes       A11y          I18n    Layouts       Frozen Cols/Rows
+  Key Binding  Responsive   Persisting    History       Calc    Validation
+  Clipboard    Nested Tables
+```
+
+
+Plus:
 - React 16.5.x
   - For React 15.x - use [this branch](https://github.com/ngduc/react-tabulator/tree/use-react-15)
 - Typescript 3.x
 - Tslint
 - Jest-puppeteer for testing
+- React Cell Editors / Filters (TBD)
 
 ### 📦 Usage
 
