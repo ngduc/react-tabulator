@@ -18,7 +18,6 @@ Tabulator's features:
   Clipboard    Nested Tables
 ```
 
-
 Plus:
 - React 16.5.x
   - For React 15.x - use [this branch](https://github.com/ngduc/react-tabulator/tree/use-react-15)
@@ -61,3 +60,5 @@ $ yarn test        Run tests using jest-puppeteer (with headless Chrome)
 All contributions are welcome!
 
 [Tabulator](https://github.com/olifolkerd/tabulator)
+
+While you're here, also check out [ez-formik](https://github.com/ngduc/ez-formik) - an easy way to build Forms with React.
