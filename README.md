@@ -61,4 +61,4 @@ All contributions are welcome!
 
 [Tabulator](https://github.com/olifolkerd/tabulator)
 
-While you're here, also check out [ez-formik](https://github.com/ngduc/ez-formik) - an easy way to build Forms with React.
+While you're here, also check out [ez-react-form](https://github.com/ngduc/ez-react-form) - an easy way to build Forms with React.
