@@ -9180,9 +9180,9 @@ symbol-tree@^3.2.2:
   integrity sha1-rifbOPZgp64uHDt9G8KQgZuFGeY=
 
 tabulator-tables@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.0.4.tgz#5cb612373e9ba81498008de3a5891533b86acbba"
-  integrity sha512-yuVRkb3D7l0wZ6e3rPonX7oMuu4CGk4jw3CigabNEc/zLaexuE1TJIfYpzsnzARnAXLkqqSdMJ07PVT5OrP8bg==
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.0.5.tgz#023561fb0708cf49219615bb76a88fd681305263"
+  integrity sha512-anZNnREOiYUfd7f5zE0HcnnE+yJIKBaaYWQhj8yw5oJCAMq2aU5JJ/FS7jZdeq5vOPvH7LvS8Q1ZstrirIGGDQ==
 
 tapable@^1.0.0:
   version "1.1.0"
