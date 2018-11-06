@@ -10,7 +10,7 @@ const columns = [
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' }
 ];
 const data = [
-  { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '', rating: 5, passed: true },
+  { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '01/01/1980', rating: 5, passed: true },
   { id: 2, name: 'Mary May', age: '1', col: 'green', dob: '14/05/1989', rating: 4, passed: true },
   { id: 3, name: 'Christine Lobowski', age: '42', col: 'green', dob: '22/05/1985', rating: 4, passed: false },
   { id: 4, name: 'Brendon Philips', age: '125', col: 'red', dob: '01/08/1980', rating: 4.5, passed: true },
@@ -20,17 +20,17 @@ const data = [
 ];
 
 // Editable Example:
-const colorOptions = { ['']: '', red: 'red', green: 'green', yellow: 'yellow' };
+const colorOptions = { ['']: '&nbsp;', red: 'red', green: 'green', yellow: 'yellow' };
 const editableColumns = [
   { title: 'Name', field: 'name', width: 150, editor: 'input', headerFilter: 'input' },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress', editor: 'progress' },
   {
     title: 'Favourite Color',
     field: 'col',
-    editor: 'select',
-    editorParams: colorOptions,
-    headerFilter: true,
-    headerFilterParams: colorOptions
+    editor: 'autocomplete',
+    editorParams: { allowEmpty: true, showListOnEmpty: true, values: colorOptions },
+    headerFilter: 'select',
+    headerFilterParams: { values: colorOptions }
   },
   { title: 'Date Of Birth', field: 'dob', align: 'center', editor: 'input' },
   { title: 'Rating', field: 'rating', align: 'center', formatter: 'star', editor: true },

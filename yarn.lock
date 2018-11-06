@@ -9179,10 +9179,10 @@ symbol-tree@^3.2.2:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
   integrity sha1-rifbOPZgp64uHDt9G8KQgZuFGeY=
 
-tabulator-tables@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.0.4.tgz#5cb612373e9ba81498008de3a5891533b86acbba"
-  integrity sha512-yuVRkb3D7l0wZ6e3rPonX7oMuu4CGk4jw3CigabNEc/zLaexuE1TJIfYpzsnzARnAXLkqqSdMJ07PVT5OrP8bg==
+tabulator-tables@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.1.1.tgz#8bada0ef601d892287dbd72b4d93be8206c18308"
+  integrity sha512-37N8AnJ6sX55ZFswd3S8HdX/hq8o2SpH+GKCaTnKdEc6iHsfHAk9lWgTPpiGVLvSTzO5r9q1Rnj9ldLIpwiXtA==
 
 tapable@^1.0.0:
   version "1.1.0"
