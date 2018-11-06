@@ -1,4 +1,4 @@
-## [0.6.0] - 2018-11-05
+## [0.6.1] - 2018-11-05
 
 ### Added
 - tabulator-tables 4.1.1 integration
