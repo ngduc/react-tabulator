@@ -1,6 +1,8 @@
 import * as React from 'react';
 import ReactTabulator from './ReactTabulator';
 
+import Editor from './editors/DateEditor';
+
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress' },
@@ -11,12 +13,12 @@ const columns = [
 ];
 const data = [
   { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '01/01/1980', rating: 5, passed: true },
-  { id: 2, name: 'Mary May', age: '1', col: 'green', dob: '14/05/1989', rating: 4, passed: true },
-  { id: 3, name: 'Christine Lobowski', age: '42', col: 'green', dob: '22/05/1985', rating: 4, passed: false },
+  { id: 2, name: 'Mary May', age: '1', col: 'green', dob: '12/05/1989', rating: 4, passed: true },
+  { id: 3, name: 'Christine Lobowski', age: '42', col: 'green', dob: '10/05/1985', rating: 4, passed: false },
   { id: 4, name: 'Brendon Philips', age: '125', col: 'red', dob: '01/08/1980', rating: 4.5, passed: true },
-  { id: 5, name: 'Margret Marmajuke', age: '16', col: 'yellow', dob: '31/01/1999', rating: 4, passed: false },
-  { id: 6, name: 'Van Ng', age: '37', col: 'green', dob: '06/15/1982', rating: 4, passed: true },
-  { id: 7, name: 'Duc Ng', age: '37', col: 'yellow', dob: '10/15/1982', rating: 4, passed: true }
+  { id: 5, name: 'Margret Marmajuke', age: '16', col: 'yellow', dob: '07/01/1999', rating: 4, passed: false },
+  { id: 6, name: 'Van Ng', age: '37', col: 'green', dob: '06/10/1982', rating: 4, passed: true },
+  { id: 7, name: 'Duc Ng', age: '37', col: 'yellow', dob: '10/10/1982', rating: 4, passed: true }
 ];
 
 // Editable Example:
@@ -32,7 +34,7 @@ const editableColumns = [
     headerFilter: 'select',
     headerFilterParams: { values: colorOptions }
   },
-  { title: 'Date Of Birth', field: 'dob', align: 'center', editor: 'input' },
+  { title: 'Date Of Birth', field: 'dob', align: 'center', editor: Editor, editorParams: { format: 'MM/dd/yyyy' } },
   { title: 'Rating', field: 'rating', align: 'center', formatter: 'star', editor: true },
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
 ];
