@@ -24,7 +24,8 @@ Plus:
 - Typescript 3.x
 - Tslint
 - Jest-puppeteer for testing
-- React Cell Editors / Filters (TBD)
+- React Cell Editors: DateEditor, etc. (TBD)
+- React Filters (TBD)
 
 ### 📦 Usage
 

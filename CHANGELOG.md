@@ -1,7 +1,8 @@
-## [0.6.2] - 2018-11-05
+## [0.6.5] - 2018-11-05
 
 ### Added
 - tabulator-tables 4.1.1 integration
+- DateEditor
 - example: autocomplete editor with header filter
 ### Changed
 - updated dev dependencies
