@@ -2,22 +2,10 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { pickHTMLProps } from 'pick-react-known-prop';
 import { IProps, propsToOptions } from './ConfigUtils';
+import { isSameArray } from './Utils';
 
 /* tslint:disable-next-line */
 const Tabulator = require('tabulator-tables');
-
-function isSameArray(a: any[], b: any[]) {
-  let i = a.length;
-  if (i !== b.length) {
-    return false;
-  }
-  while (i--) {
-    if (a[i] !== b[i]) {
-      return false;
-    }
-  }
-  return true;
-}
 
 interface IState {
   data: any[];

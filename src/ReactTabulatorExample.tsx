@@ -6,19 +6,19 @@ import Editor from './editors/DateEditor';
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress' },
-  { title: 'Favourite Color', field: 'col' },
-  { title: 'Date Of Birth', field: 'dob', align: 'center' },
+  { title: 'Favourite Color', field: 'color' },
+  { title: 'Date Of Birth', field: 'dob' },
   { title: 'Rating', field: 'rating', align: 'center', formatter: 'star' },
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' }
 ];
 const data = [
-  { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '01/01/1980', rating: 5, passed: true },
-  { id: 2, name: 'Mary May', age: '1', col: 'green', dob: '12/05/1989', rating: 4, passed: true },
-  { id: 3, name: 'Christine Lobowski', age: '42', col: 'green', dob: '10/05/1985', rating: 4, passed: false },
-  { id: 4, name: 'Brendon Philips', age: '125', col: 'red', dob: '01/08/1980', rating: 4.5, passed: true },
-  { id: 5, name: 'Margret Marmajuke', age: '16', col: 'yellow', dob: '07/01/1999', rating: 4, passed: false },
-  { id: 6, name: 'Van Ng', age: '37', col: 'green', dob: '06/10/1982', rating: 4, passed: true },
-  { id: 7, name: 'Duc Ng', age: '37', col: 'yellow', dob: '10/10/1982', rating: 4, passed: true }
+  { id: 1, name: 'Oli Bob', age: '12', color: 'red', dob: '01/01/1980', rating: 5, passed: true },
+  { id: 2, name: 'Mary May', age: '1', color: 'green', dob: '12/05/1989', rating: 4, passed: true },
+  { id: 3, name: 'Christine Lobowski', age: '42', color: 'green', dob: '10/05/1985', rating: 4, passed: false },
+  { id: 4, name: 'Brendon Philips', age: '125', color: 'red', dob: '01/08/1980', rating: 4.5, passed: true },
+  { id: 5, name: 'Margret Marmajuke', age: '16', color: 'yellow', dob: '07/01/1999', rating: 4, passed: false },
+  { id: 6, name: 'Van Ng', age: '37', color: 'green', dob: '06/10/1982', rating: 4, passed: true },
+  { id: 7, name: 'Duc Ng', age: '37', color: 'yellow', dob: '10/10/1982', rating: 4, passed: true }
 ];
 
 // Editable Example:
@@ -28,13 +28,13 @@ const editableColumns = [
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress', editor: 'progress' },
   {
     title: 'Favourite Color',
-    field: 'col',
+    field: 'color',
     editor: 'autocomplete',
     editorParams: { allowEmpty: true, showListOnEmpty: true, values: colorOptions },
     headerFilter: 'select',
     headerFilterParams: { values: colorOptions }
   },
-  { title: 'Date Of Birth', field: 'dob', align: 'center', editor: Editor, editorParams: { format: 'MM/dd/yyyy' } },
+  { title: 'Date Of Birth', field: 'dob', editor: Editor, editorParams: { format: 'MM/dd/yyyy' } },
   { title: 'Rating', field: 'rating', align: 'center', formatter: 'star', editor: true },
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
 ];
@@ -85,7 +85,12 @@ export default class extends React.Component<IProps> {
         <ReactTabulator columns={columns} data={this.state.data} />
 
         <h3>Editable Table</h3>
-        <ReactTabulator columns={editableColumns} data={data} />
+        <ReactTabulator
+          columns={editableColumns}
+          data={data}
+          cellEdited={(ev: any) => console.log('cellEdited', ev)}
+          dataEdited={(ev: any) => console.log('dataEdited', ev)}
+        />
 
         <p>
           <a href="https://github.com/ngduc/react-tabulator" target="_blank">

@@ -2,22 +2,10 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { pickHTMLProps } from 'pick-react-known-prop';
 import { IProps, propsToOptions } from './ConfigUtils';
+import { isSameArray } from './Utils';
 
 /* tslint:disable-next-line */
 const Tabulator = require('tabulator-tables');
-
-function isSameArray(a: any[], b: any[]) {
-  let i = a.length;
-  if (i !== b.length) {
-    return false;
-  }
-  while (i--) {
-    if (a[i] !== b[i]) {
-      return false;
-    }
-  }
-  return true;
-}
 
 interface IState {
   data: any[];
@@ -74,7 +62,6 @@ export default class extends React.Component<IProps, Partial<IState>> {
       return null;
     }
     if (state && state.data.length === 0 && props.data.length === 0) {
-      // console.log('(data = [])');
       return null;
     }
     if (state && props.data) {
@@ -88,7 +75,6 @@ export default class extends React.Component<IProps, Partial<IState>> {
 
   // componentDidUpdate(prevProps, prevState)
   componentDidUpdate() {
-    // console.log('- componentDidUpdate');
     this.table.setData(this.state.data);
   }
 
@@ -102,7 +88,6 @@ export default class extends React.Component<IProps, Partial<IState>> {
   };
 
   render() {
-    // console.log('*** render');
     this.pickValidHTMLProps();
     const { className } = this.props;
     return <div ref={ref => (this.ref = ref)} data-instance={this.mainId} {...this.htmlProps} className={className} />;
