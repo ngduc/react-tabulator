@@ -15,16 +15,16 @@ Tabulator's features:
   Filters      Sorting      Formatting    Grouping      Ajax      Editing    Virtualization
   Pagination   Themes       A11y          I18n          Layouts   Frozen Cols/Rows
   Key Binding  Responsive   Persisting    History       Calc      Validation
-  Clipboard    Nested Tables
+  Clipboard    Tree Layout  Nested Tables
 ```
 
 Plus:
 - React 16.5.x
-  - For React 15.x - use [this branch](https://github.com/ngduc/react-tabulator/tree/use-react-15)
+  - For React 15.x - import `React15Tabulator`
 - Typescript 3.x
 - Tslint
 - Jest-puppeteer for testing
-- React Cell Editors: DateEditor, etc. (TBD)
+- React Cell Editors: DateEditor, etc.
 - React Filters (TBD)
 
 ### 📦 Usage

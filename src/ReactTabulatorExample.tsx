@@ -1,7 +1,7 @@
 import * as React from 'react';
 import ReactTabulator from './ReactTabulator';
 
-import Editor from './editors/DateEditor';
+import DateEditor from './editors/DateEditor';
 
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
@@ -34,7 +34,7 @@ const editableColumns = [
     headerFilter: 'select',
     headerFilterParams: { values: colorOptions }
   },
-  { title: 'Date Of Birth', field: 'dob', editor: Editor, editorParams: { format: 'MM/dd/yyyy' } },
+  { title: 'Date Of Birth', field: 'dob', editor: DateEditor, editorParams: { format: 'MM/dd/yyyy' } },
   { title: 'Rating', field: 'rating', align: 'center', formatter: 'star', editor: true },
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
 ];
