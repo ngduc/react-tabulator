@@ -32,7 +32,7 @@ Plus:
 ```JS
 $ npm install react-tabulator
 
-import 'react-tabulator/lib/styles.css'; // default theme
+import 'react-tabulator/styles.css'; // default theme
 import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import { React15Tabulator }
 
 <ReactTabulator data={data} />

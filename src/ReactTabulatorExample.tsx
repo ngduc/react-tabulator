@@ -29,7 +29,7 @@ const editableColumns = [
   {
     title: 'Favourite Color',
     field: 'color',
-    editor: 'autocomplete',
+    editor: 'select',
     editorParams: { allowEmpty: true, showListOnEmpty: true, values: colorOptions },
     headerFilter: 'select',
     headerFilterParams: { values: colorOptions }
