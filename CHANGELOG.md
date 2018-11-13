@@ -1,5 +1,7 @@
-## [0.6.10] - 2018-11-12
+## [0.6.11] - 2018-11-13
 
+### Added
+- MultiValuesFormatter
 ### Changed
 - BREAKING: moved "css" directory out of "lib" - usage: import "react-tabulator/styles.css";
 - fix: upgraded default styles.css to 4.1.1
