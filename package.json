@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.6.11",
+  "version": "0.7.0",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -44,7 +44,7 @@
     "date-fns": "v2.0.0-alpha.25",
     "dotenv": "^6.1.0",
     "pick-react-known-prop": "^0.1.5",
-    "tabulator-tables": "^4.1.1"
+    "tabulator-tables": "^4.1.2"
   },
   "peerDependencies": {
     "react": "16.x"

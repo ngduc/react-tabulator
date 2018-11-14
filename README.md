@@ -25,7 +25,7 @@ Plus:
 - Tslint
 - Jest-puppeteer for testing
 - React Cell Editors: DateEditor, etc.
-- React Cell Formatters: MultiValuesFormatter, etc.
+- React Cell Formatters: MultiValueFormatter, etc.
 - React Filters (TBD)
 
 ### 📦 Usage
@@ -33,7 +33,8 @@ Plus:
 ```JS
 $ npm install react-tabulator
 
-import 'react-tabulator/lib/styles.css'; // default theme
+import 'react-tabulator/lib/styles.css'; // required styles
+import 'react-tabulator/lib/css/tabulator.min.css'; // theme
 import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import { React15Tabulator }
 
 <ReactTabulator data={data} />

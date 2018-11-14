@@ -1,10 +1,12 @@
-## [0.6.11] - 2018-11-13
+## [0.7.0] - 2018-11-13
 
 ### Added
-- MultiValuesFormatter
+- MultiValueFormatter
 ### Changed
-- BREAKING: moved "css" directory out of "lib" - usage: import "react-tabulator/styles.css";
-- fix: upgraded default styles.css to 4.1.1
+- BREAKING: moved "css" directory out of "lib" - usage: import "react-tabulator/styles.css"
+- BREAKING: separated required styles.css and tabulator theme css (import them separately)
+- upgraded tabulator to 4.1.2
+- fix: upgraded default styles.css to 4.1.2
 
 ## [0.6.6] - 2018-11-05
 
