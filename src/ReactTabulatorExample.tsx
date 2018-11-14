@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactTabulator from './ReactTabulator';
 
 import DateEditor from './editors/DateEditor';
-import MultiValuesFormatter from './formatters/MultiValuesFormatter';
+import MultiValueFormatter from './formatters/MultiValueFormatter';
 
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
@@ -45,7 +45,7 @@ const editableColumns = [
     headerFilterParams: { values: colorOptions }
   },
   { title: 'Date Of Birth', field: 'dob', editor: DateEditor, editorParams: { format: 'MM/dd/yyyy' } },
-  { title: 'Pets', field: 'pets', formatter: MultiValuesFormatter },
+  { title: 'Pets', field: 'pets', formatter: MultiValueFormatter, formatterParams: { style: 'PILL' } },
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
 ];
 
