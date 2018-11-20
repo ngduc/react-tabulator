@@ -1,3 +1,6 @@
+export function clone(obj: any) {
+  return JSON.parse(JSON.stringify(obj));
+}
 
 export function isSameArray(a: any[], b: any[]) {
   let i = a.length;
