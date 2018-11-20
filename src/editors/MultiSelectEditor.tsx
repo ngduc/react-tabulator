@@ -81,8 +81,8 @@ class Editor extends React.Component<IProps> {
       cancel();
     }
 
-    if (this.ref) {
-      const el: any = findDOMNode(this.ref);
+    const el: any = findDOMNode(this.ref);
+    if (el && el.parentElement.parentElement.parentElement) {
       el.parentElement.parentElement.parentElement.style.overflow = 'hidden';
     }
     // console.log('- handleBlur END');
