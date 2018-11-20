@@ -1,7 +1,8 @@
-## [0.7.0] - 2018-11-13
+## [0.7.6] - 2018-11-19
 
 ### Added
 - MultiValueFormatter
+- MultiSelectEditor
 ### Changed
 - BREAKING: moved "css" directory out of "lib" - usage: import "react-tabulator/styles.css"
 - BREAKING: separated required styles.css and tabulator theme css (import them separately)

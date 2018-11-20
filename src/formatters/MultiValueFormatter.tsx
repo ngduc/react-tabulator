@@ -14,21 +14,22 @@ export default function(cell: any, formatterParams: any, onRendered: (fn: any) =
   const style = formatterParams.style || ''; // comma separated plain text
 
   const arr = cell.getValue() || [];
-  let content = arr.join(', ');
+  let content = arr && arr.length > 0 && typeof arr[0] === 'string' ? <span>{arr.join(', ')}</span> : <span />;
 
   if (style === 'PILL') {
+    // TODO: use React.Fragment here to remove unnecessary div. (but will break React 15 example in Codesandbox)
     content = (
-      <React.Fragment>
-        {arr.map((value: string) => (
-          <span>{value}</span>
-        ))}
-      </React.Fragment>
+      <div>
+        {arr.map((item: any) => {
+          return typeof item === 'string' ? <span>{item}</span> : <span>{item.name}</span>;
+        })}
+      </div>
     );
   }
 
   const el = createCellEl();
   el.className = 'multi-value-formatter-content';
-  el.title = arr.join(', ');
+  el.title = arr && arr.length > 0 && typeof arr[0] === 'string' ? arr.join(', ') : '';
   render(content, el);
   return el;
 }

@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.7.0",
+  "version": "0.7.6",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -41,9 +41,11 @@
   },
   "homepage": "https://github.com/ngduc/react-tabulator#readme",
   "dependencies": {
+    "@types/react-tag-autocomplete": "^5.6.0",
     "date-fns": "v2.0.0-alpha.25",
     "dotenv": "^6.1.0",
     "pick-react-known-prop": "^0.1.5",
+    "react-tag-autocomplete": "^5.7.1",
     "tabulator-tables": "^4.1.2"
   },
   "peerDependencies": {

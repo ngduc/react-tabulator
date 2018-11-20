@@ -2,6 +2,7 @@ import * as React from 'react';
 import ReactTabulator from './ReactTabulator';
 
 import DateEditor from './editors/DateEditor';
+import MultiSelectEditor from './editors/MultiSelectEditor';
 import MultiValueFormatter from './formatters/MultiValueFormatter';
 
 const columns = [
@@ -33,6 +34,7 @@ const data = [
 
 // Editable Example:
 const colorOptions = { ['']: '&nbsp;', red: 'red', green: 'green', yellow: 'yellow' };
+const petOptions = [{ id: 'cat', name: 'cat' }, { id: 'dog', name: 'dog' }, { id: 'fish', name: 'fish' }];
 const editableColumns = [
   { title: 'Name', field: 'name', width: 150, editor: 'input', headerFilter: 'input' },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress', editor: 'progress' },
@@ -45,7 +47,14 @@ const editableColumns = [
     headerFilterParams: { values: colorOptions }
   },
   { title: 'Date Of Birth', field: 'dob', editor: DateEditor, editorParams: { format: 'MM/dd/yyyy' } },
-  { title: 'Pets', field: 'pets', formatter: MultiValueFormatter, formatterParams: { style: 'PILL' } },
+  {
+    title: 'Pets',
+    field: 'pets',
+    editor: MultiSelectEditor,
+    editorParams: { values: petOptions },
+    formatter: MultiValueFormatter,
+    formatterParams: { style: 'PILL' }
+  },
   { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
 ];
 
@@ -98,8 +107,8 @@ export default class extends React.Component<IProps> {
         <ReactTabulator
           columns={editableColumns}
           data={data}
-          cellEdited={(ev: any) => console.log('cellEdited', ev)}
-          dataEdited={(ev: any) => console.log('dataEdited', ev)}
+          cellEdited={(cell: any) => console.log('cellEdited', cell)}
+          dataEdited={(newData: any) => console.log('dataEdited', newData)}
         />
 
         <p>

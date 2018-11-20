@@ -65,6 +65,13 @@
     "@types/node" "*"
     "@types/react" "*"
 
+"@types/react-tag-autocomplete@^5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@types/react-tag-autocomplete/-/react-tag-autocomplete-5.6.0.tgz#26a9af61f78e0d6a669b37a09ddd97dbb30bffcc"
+  integrity sha512-EsUrbpKW5agXs/NbMUQRgwtZInQbUIIPBXiUz+XcJeUP7U6BRCWjw96sQmsEPRUwO0CdPfQEd82zwpCIGEr4Ew==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^16.4.14":
   version "16.4.18"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.4.18.tgz#2e28a2e7f92d3fa7d6a65f2b73275c3e3138a13d"
@@ -7926,6 +7933,11 @@ react-proxy@^1.1.7:
   dependencies:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
+
+react-tag-autocomplete@^5.7.1:
+  version "5.7.1"
+  resolved "https://registry.yarnpkg.com/react-tag-autocomplete/-/react-tag-autocomplete-5.7.1.tgz#1996eb8dddfff826668111923b0f3e8c3a1d4e55"
+  integrity sha512-9MJBnqlmNsnNsaDC2cQt/6rCdTrP++aUuIHAhAszi/w5IeEGSgLxHZ4nvkofJXQxtJe0+n/kTpQ3Jasr1MgJCA==
 
 react-test-renderer@^16.0.0-0:
   version "16.5.2"
