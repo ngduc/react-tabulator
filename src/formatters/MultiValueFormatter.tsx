@@ -21,7 +21,7 @@ export default function(cell: any, formatterParams: any, onRendered: (fn: any) =
     content = (
       <div>
         {arr.map((item: any) => {
-          return typeof item === 'string' ? <span>{item}</span> : <span>{item.name}</span>;
+          return typeof item === 'string' ? <span key={item}>{item}</span> : <span key={item.name}>{item.name}</span>;
         })}
       </div>
     );

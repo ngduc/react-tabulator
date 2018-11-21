@@ -109,6 +109,7 @@ export default class extends React.Component<IProps> {
           data={data}
           cellEdited={(cell: any) => console.log('cellEdited', cell)}
           dataEdited={(newData: any) => console.log('dataEdited', newData)}
+          footerElement={<span>Footer</span>}
         />
 
         <p>

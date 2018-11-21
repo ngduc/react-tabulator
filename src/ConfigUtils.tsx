@@ -1,3 +1,5 @@
+import { renderToString } from 'react-dom/server';
+
 // .prettierignore    (to keep relevant props together)
 const NOOPS = () => {};
 
@@ -19,7 +21,7 @@ export interface IProps {
 	tooltipGenerationMode?: string, // when to generate tooltips - default: 'load'
 	initialSort?: boolean, // initial sorting criteria - default: false
 	initialFilter?: boolean, // initial filtering criteria - default: false
-	footerElement?: boolean, // hold footer element - default: false
+	footerElement?: any, // hold footer element - default: false
 	index?: string, // filed for row index - default: 'id'
 	keybindings?:[], // array for keybindings - default: []
 	clipboard?: boolean, // enable clipboard - default: false
@@ -137,6 +139,10 @@ export const propsToOptions = (props: any) => {
   
   for (const callbackName of names) {
     output[callbackName] = props[callbackName] || NOOPS
+  }
+  if (typeof props['footerElement'] === 'object') {
+    // convert from JSX to HTML string (tabulator's footerElement accepts string)
+    output['footerElement'] = renderToString(props['footerElement'])
   }
   return output
 }
