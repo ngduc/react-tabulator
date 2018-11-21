@@ -1,7 +1,3 @@
-.react-tags__selected-tag:after {
-  display: none;
-}
-
 .multi-value-formatter-content span {
   padding: 2px 4px;
   border-radius: 2px;
@@ -9,12 +5,25 @@
   margin-right: 4px;
 }
 
+/* --------- customized react-tags styles */
+.react-tags {
+  padding: 0px 0 0 6px !important;
+  border: none !important;
+}
+.react-tags__selected-tag:after {
+  /* TODO: for now, don't show the delete icon "X" for react-tags */
+  display: none !important;
+}
+.react-tags__selected-tag {
+  padding: 2px 4px !important;
+}
+
+/* --------- default react-tags styles */
 .react-tags__search input {
   width: 100% !important;
 }
 
-
- .react-tags {
+.react-tags {
   position: relative;
   padding: 6px 0 0 6px;
   border: 1px solid #D1D1D1;
