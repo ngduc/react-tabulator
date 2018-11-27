@@ -38,7 +38,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
       dataLoaded() {
         that.props.dataLoaded ? that.props.dataLoaded() : '';
       },
-      ...options,
+      ...options, // props.options are passed to Tabulator's options.
       data
     });
     // await table.setData(data);

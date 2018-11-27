@@ -1,3 +1,8 @@
+## [0.7.10] - 2018-11-26
+
+### Changed
+- upgraded tabulator to 4.1.3
+
 ## [0.7.9] - 2018-11-20
 
 ### Added

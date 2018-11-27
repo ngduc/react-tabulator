@@ -73,6 +73,7 @@ class Editor extends React.Component<IProps> {
     const { cancel } = this.props;
     const newValue = this.ref.input.input.value;
     if (newValue) {
+      // console.log(111, newValue, this.ref);
       const values = clone(this.state.values);
       values.push({ id: newValue, name: newValue });
       // console.log('- handleBlur ', values);
@@ -89,7 +90,7 @@ class Editor extends React.Component<IProps> {
   };
 
   render() {
-    const { cell, editorParams } = this.props;
+    const { editorParams } = this.props;
     const { values } = this.state;
     const suggestions = editorParams.values;
 
