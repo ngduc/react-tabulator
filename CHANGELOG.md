@@ -1,7 +1,8 @@
-## [0.7.10] - 2018-11-26
+## [0.7.11] - 2018-11-26
 
 ### Changed
 - upgraded tabulator to 4.1.3
+- pin event-stream to 3.3.4 to fix [security issue](https://github.com/dominictarr/event-stream/issues/116)
 
 ## [0.7.9] - 2018-11-20
 

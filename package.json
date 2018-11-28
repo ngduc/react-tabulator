@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -60,6 +60,7 @@
     "concurrently": "^4.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "event-stream": "3.3.4",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "jest-puppeteer": "^3.4.0",
