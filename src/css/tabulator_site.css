@@ -1,4 +1,4 @@
-/* Tabulator v4.1.3 (c) Oliver Folkerd */
+/* Tabulator v4.2.0 (c) Oliver Folkerd */
 .tabulator {
   position: relative;
   border-bottom: 5px solid #222;
@@ -322,6 +322,18 @@
 .tabulator .tabulator-footer .tabulator-calcs-holder:only-child {
   margin-bottom: -5px;
   border-bottom: none;
+}
+
+.tabulator .tabulator-footer .tabulator-paginator label {
+  color: #fff;
+}
+
+.tabulator .tabulator-footer .tabulator-page-size {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 2px 5px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
 }
 
 .tabulator .tabulator-footer .tabulator-pages {
@@ -662,6 +674,13 @@
 
 .tabulator-row .tabulator-cell .tabulator-responsive-collapse-toggle .tabulator-responsive-collapse-toggle-close {
   display: none;
+}
+
+.tabulator-row .tabulator-cell .tabulator-traffic-light {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  border-radius: 14px;
 }
 
 .tabulator-row.tabulator-group {
