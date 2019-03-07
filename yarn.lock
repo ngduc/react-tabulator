@@ -9255,10 +9255,10 @@ symbol-tree@^3.2.2:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
   integrity sha1-rifbOPZgp64uHDt9G8KQgZuFGeY=
 
-tabulator-tables@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.2.0.tgz#53890a5219ed6d0169e201b677f7a317eb267c1b"
-  integrity sha512-v7R+NXp7gfaarCQskWAo2PBTw1qYxprXsrxrGPufYS4jR3gVt5rH0IQz9jf+3jH2qmhFe3H7kQFXD8lbfcoTYw==
+tabulator-tables@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.2.2.tgz#40e9ff6276b79ec642926035699925dee2bccb91"
+  integrity sha512-Ju3cvCT9oKC7P93nGX2MfMRYYGOd4JyYoV6LgyV0OVHnnLtWR2JajChzTG2ndkluOBAIbKSzhYoWew8yvm9qBA==
 
 tapable@^1.0.0:
   version "1.1.0"

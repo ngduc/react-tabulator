@@ -109,14 +109,15 @@ export interface IProps {
   options?: any; // Tabulator options object
 }
 
-// get callbacks from props (default: NOOP) & set them to Tabulator options
+// get callbacks from props (default: NOOP) to set them to Tabulator options later.
 export const propsToOptions = (props: any) => {
   const output: any = {}
 
   const defaultOptions = ['height', 'layout', 'layoutColumnsOnNewData', 'columnMinWidth', 'columnVertAlign',
   'resizableColumns', 'resizableRows', 'autoResize', 'tooltips', 'tooltipsHeader', 'tooltipGenerationMode',
   'initialSort', 'initialFilter', 'footerElement', 'index', 'keybindings', 'clipboard', 'clipboardCopyStyled',
-  'clipboardCopySelector', 'clipboardCopyFormatter', 'clipboardCopyHeader', 'clipboardPasteParser', 'clipboardPasteAction']
+  'clipboardCopySelector', 'clipboardCopyFormatter', 'clipboardCopyHeader', 'clipboardPasteParser',
+  'clipboardPasteAction', 'rowFormatter', 'placeholder']
 
   for (const opt of defaultOptions) {
     if (typeof props[opt] !== 'undefined') {
@@ -124,7 +125,7 @@ export const propsToOptions = (props: any) => {
     }
   }
 
-  const names = ['tableBuilt','rowClick','rowDblClick','rowContext','rowTap','rowDblTap','rowTapHold',
+  const callbackNames = ['tableBuilt','rowClick','rowDblClick','rowContext','rowTap','rowDblTap','rowTapHold',
     'rowAdded','rowDeleted','rowMoved','rowUpdated','rowSelectionChanged','rowSelected','rowDeselected','rowResized',
     'cellClick','cellDblClick','cellContext','cellTap','cellDblTap','cellTapHold','cellEditing','cellEdited','cellEditCancelled',
     'columnMoved','columnResized','columnTitleChanged','columnVisibilityChanged',
@@ -137,7 +138,7 @@ export const propsToOptions = (props: any) => {
     'validationFailed','clipboardCopied','clipboardPasted','clipboardPasteError',
     'downloadDataFormatter','downloadReady','downloadComplete'];
   
-  for (const callbackName of names) {
+  for (const callbackName of callbackNames) {
     output[callbackName] = props[callbackName] || NOOPS
   }
   if (typeof props['footerElement'] === 'object') {
