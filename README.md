@@ -18,7 +18,7 @@ Tabulator's features:
   Clipboard    Tree Layout  Nested Tables
 ```
 
-Plus:
+#### Plus more features:
 - React 16.5.x
   - For React 15.x - import `React15Tabulator`
 - Typescript 3.x
