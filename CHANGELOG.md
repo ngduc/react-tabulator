@@ -1,3 +1,9 @@
+## [0.8.4] - 2019-03-07
+
+### Changed
+- upgraded tabulator to 4.2.2
+- fix: added rowFormatter, placeholder as props
+
 ## [0.8.3] - 2019-02-17
 
 ### Changed

@@ -30,14 +30,14 @@ Plus:
 
 ### 📦 Usage
 
-```JS
+```
 $ npm install react-tabulator
 
 import 'react-tabulator/lib/styles.css'; // required styles
 import 'react-tabulator/lib/css/tabulator.min.css'; // theme
 import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import { React15Tabulator }
 
-<ReactTabulator columns={columns} data={data} options={} />
+    <ReactTabulator columns={columns} data={data} options={} />
 
 "options" will be passed directly to Tabulator's options.
 ```
@@ -66,4 +66,4 @@ All contributions are welcome!
 
 [Tabulator](https://github.com/olifolkerd/tabulator)
 
-While you're here, also check out [ez-react-form](https://github.com/ngduc/ez-react-form) - an easy way to build Forms with React.
+While you're here, also check out [ui-form-field](https://github.com/ngduc/ui-form-field) - an easy way to build Forms with React.
