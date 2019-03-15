@@ -9,7 +9,7 @@ import { reactFormatter } from './Utils';
 
 function SimpleButton (props: any) {
   const cellData = props.cell._cell.row.data;
-  return <button onClick={() => alert(cellData.name)}>Show Name</button>
+  return <button onClick={() => alert(cellData.name)}>Show</button>
 }
 
 const columns = [

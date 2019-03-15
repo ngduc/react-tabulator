@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -74,5 +74,10 @@
     "tslint-config-prettier": "^1.15.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.3.3333"
+  },
+  "resolutions": {
+    "cryptiles": "^4.1.2",
+    "hoek": "^4.2.1",
+    "webpack-dev-server": "3.1.11"
   }
 }

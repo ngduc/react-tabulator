@@ -1,10 +1,11 @@
-## [0.9.0] - 2019-03-15
+## [0.9.1] - 2019-03-15
 
 ### Added
 - reactFormatter to support JSX for Tabulator's formatter (see: ReactTabulatorExample.tsx)
 
 ### Changed
 - upgraded tabulator to 4.2.3
+- pinned some 3rd-party modules to fix security warnings
 
 ## [0.8.4] - 2019-03-07
 
