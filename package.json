@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -46,7 +46,7 @@
     "dotenv": "^6.1.0",
     "pick-react-known-prop": "^0.1.5",
     "react-tag-autocomplete": "^5.7.1",
-    "tabulator-tables": "^4.2.2"
+    "tabulator-tables": "^4.2.3"
   },
   "peerDependencies": {
     "react": "16.x"
@@ -72,6 +72,6 @@
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-react": "^3.6.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.3.3333"
   }
 }

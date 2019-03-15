@@ -5,13 +5,21 @@ import DateEditor from './editors/DateEditor';
 import MultiSelectEditor from './editors/MultiSelectEditor';
 import MultiValueFormatter from './formatters/MultiValueFormatter';
 
+import { reactFormatter } from './Utils';
+
+function SimpleButton (props: any) {
+  const cellData = props.cell._cell.row.data;
+  return <button onClick={() => alert(cellData.name)}>Show Name</button>
+}
+
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
   { title: 'Age', field: 'age', align: 'left', formatter: 'progress' },
   { title: 'Favourite Color', field: 'color' },
   { title: 'Date Of Birth', field: 'dob' },
   { title: 'Rating', field: 'rating', align: 'center', formatter: 'star' },
-  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' }
+  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' },
+  { title: 'Custom', field: 'custom', align: 'center', formatter: reactFormatter(<SimpleButton />) },
 ];
 const data = [
   { id: 1, name: 'Oli Bob', age: '12', color: 'red', dob: '01/01/1980', rating: 5, passed: true, pets: ['cat', 'dog'] },

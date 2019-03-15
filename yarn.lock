@@ -9255,10 +9255,10 @@ symbol-tree@^3.2.2:
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
   integrity sha1-rifbOPZgp64uHDt9G8KQgZuFGeY=
 
-tabulator-tables@^4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.2.2.tgz#40e9ff6276b79ec642926035699925dee2bccb91"
-  integrity sha512-Ju3cvCT9oKC7P93nGX2MfMRYYGOd4JyYoV6LgyV0OVHnnLtWR2JajChzTG2ndkluOBAIbKSzhYoWew8yvm9qBA==
+tabulator-tables@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.2.3.tgz#7939a6dc350dca2098797933b2e924e6b0ef4b35"
+  integrity sha512-vMQ/8/HSKzOdn1zd9uv7EmnBnMTlX8JMhfxAxEUkM12qYiqhapWp/iN2ErtDX2cVi+4CUaEn61qydSFJyKjdYA==
 
 tapable@^1.0.0:
   version "1.1.0"
@@ -9594,10 +9594,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.0.3:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.1.tgz#0b7a04b8cf3868188de914d9568bd030f0c56192"
-  integrity sha512-jw7P2z/h6aPT4AENXDGjcfHTu5CSqzsbZc6YlUIebTyBAq8XaKp78x7VcSh30xwSCcsu5irZkYZUSFP1MrAMbg==
+typescript@^3.3.3333:
+  version "3.3.3333"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.3333.tgz#171b2c5af66c59e9431199117a3bcadc66fdcfd6"
+  integrity sha512-JjSKsAfuHBE/fB2oZ8NxtRTk5iGcg6hkYXMnZ3Wc+b2RSqejEqTaem11mHASMnFilHrax3sLK0GDzcJrekZYLw==
 
 uglify-es@^3.3.4:
   version "3.3.9"
