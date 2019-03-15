@@ -4,9 +4,9 @@
 
 React Tabulator is based on [tabulator](https://github.com/olifolkerd/tabulator) - an advanced table library with many useful features.
 
-- Live Demo: [Codesandbox](https://codesandbox.io/s/0mwpy612xw)
+- Live Demo: [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 
-[![Screenshot](screenshot.png)](https://codesandbox.io/s/0mwpy612xw)
+[![Screenshot](screenshot.png)](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 
 ### 🌟 Features
 
@@ -43,7 +43,7 @@ import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import 
 ```
 
 - Code Example: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
-- Code Example (React 15.x): [Codesandbox](https://codesandbox.io/s/0mwpy612xw)
+- Code Example (React 15.x): [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 
 ### 🔧 Commands
 
