@@ -61,7 +61,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
       // first time (similar to: componentWillMount)
       return null;
     }
-    if (state && state.data.length === 0 && props.data.length === 0) {
+    if (state && state.data && state.data.length === 0 && props.data.length === 0) {
       return null;
     }
     if (state && props.data) {
