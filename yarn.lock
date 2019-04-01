@@ -8046,9 +8046,9 @@ react-proxy@^1.1.7:
     react-deep-force-update "^1.0.0"
 
 react-tag-autocomplete@^5.7.1:
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/react-tag-autocomplete/-/react-tag-autocomplete-5.7.1.tgz#1996eb8dddfff826668111923b0f3e8c3a1d4e55"
-  integrity sha512-9MJBnqlmNsnNsaDC2cQt/6rCdTrP++aUuIHAhAszi/w5IeEGSgLxHZ4nvkofJXQxtJe0+n/kTpQ3Jasr1MgJCA==
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/react-tag-autocomplete/-/react-tag-autocomplete-5.9.0.tgz#413303ea6f4c5c66430ecc936ef7ae6f157a934e"
+  integrity sha512-u8d/V+vjlI0riO0mVI+F0GjTx75dck6gCmCJww/2QaRB2GqeY+fohwNohdkifkLeTQR3K8EGdkRe8+m1QseSiw==
 
 react-test-renderer@^16.0.0-0:
   version "16.5.2"
