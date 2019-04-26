@@ -65,7 +65,7 @@
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "jest-puppeteer": "^3.4.0",
-    "nwb": "0.23.x",
+    "nwb": "^0.23.0",
     "puppeteer": "^1.9.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
