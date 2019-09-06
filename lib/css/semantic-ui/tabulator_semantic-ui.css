@@ -1,4 +1,4 @@
-/* Tabulator v4.2.3 (c) Oliver Folkerd */
+/* Tabulator v4.4.1 (c) Oliver Folkerd */
 /*******************************
          Site Settings
 *******************************/
@@ -233,7 +233,7 @@
   margin: 1em 0em;
   border: 1px solid rgba(34, 36, 38, 0.15);
   box-shadow: none;
-  border-radius: 0.28571/pxrem;
+  border-radius: 0.28571rem;
   color: rgba(0, 0, 0, 0.87);
   -ms-transform: translatez(0);
   transform: translatez(0);
@@ -280,6 +280,10 @@
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
+}
+
+.tabulator .tabulator-header.tabulator-header-hidden {
+  display: none;
 }
 
 .tabulator .tabulator-header .tabulator-col {
@@ -402,9 +406,8 @@
 }
 
 .tabulator .tabulator-header .tabulator-col.tabulator-col-vertical .tabulator-col-content .tabulator-col-title {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   text-orientation: mixed;
   display: -ms-flexbox;
   display: flex;
@@ -1299,4 +1302,21 @@
   padding-top: 6px;
   color: #333;
   font-weight: bold;
+}
+
+.tabulator-print-fullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
+  display: none !important;
+}
+
+.tabulator-print-table {
+  border-collapse: collapse;
 }

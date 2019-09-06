@@ -1,4 +1,4 @@
-/* Tabulator v4.2.3 (c) Oliver Folkerd */
+/* Tabulator v4.4.1 (c) Oliver Folkerd */
 .tabulator {
   position: relative;
   background-color: white;
@@ -37,6 +37,10 @@
   -o-user-select: none;
 }
 
+.tabulator .tabulator-header.tabulator-header-hidden {
+  display: none;
+}
+
 .tabulator .tabulator-header .tabulator-col {
   display: inline-block;
   position: relative;
@@ -49,7 +53,7 @@
 
 .tabulator .tabulator-header .tabulator-col.tabulator-moving {
   position: absolute;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   pointer-events: none;
 }
 
@@ -141,7 +145,7 @@
 
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover {
   cursor: pointer;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .tabulator .tabulator-header .tabulator-col.tabulator-sortable[aria-sort="none"] .tabulator-col-content .tabulator-arrow {
@@ -160,9 +164,8 @@
 }
 
 .tabulator .tabulator-header .tabulator-col.tabulator-col-vertical .tabulator-col-content .tabulator-col-title {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
   text-orientation: mixed;
   display: -ms-flexbox;
   display: flex;
@@ -824,4 +827,21 @@
   padding-top: 6px;
   color: #363636;
   font-weight: bold;
+}
+
+.tabulator-print-fullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+body.tabulator-print-fullscreen-hide > *:not(.tabulator-print-fullscreen) {
+  display: none !important;
+}
+
+.tabulator-print-table {
+  border-collapse: collapse;
 }

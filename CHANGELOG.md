@@ -1,3 +1,10 @@
+## [0.9.5] - 2019-03-15
+
+### Changed
+- upgraded tabulator to 4.4.1
+- upgraded dependencies
+- merged PR #75 - thanks @maco222
+
 ## [0.9.1] - 2019-03-15
 
 ### Added

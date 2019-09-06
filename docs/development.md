@@ -7,5 +7,6 @@ To upgrade tabulator:
 - run ```$ yarn``` to update
 - run ```$ yarn test``` make sure all tests pass
 - copy all css files from ```node_modules/tabulator-tables/dist/css/``` to ```src/css/```
+- run ```$ yarn build```
 - update CHANGELOG
 - commit & push & npm publish
