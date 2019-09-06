@@ -6937,7 +6937,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nwb@0.23.x:
+nwb@^0.23.0:
   version "0.23.0"
   resolved "https://registry.yarnpkg.com/nwb/-/nwb-0.23.0.tgz#038f8e54ea36b3887cecfc8ae5d3aef7b204d75a"
   integrity sha512-FoNOQaK4J+PUUBLWn2eUDv829OEwxz2Bi9MuXPrV8ZGNf0zTDw5gCNIzDnwzf5yuwLQe9LbVjUd1JmjYh4uw6A==
@@ -8074,14 +8074,13 @@ react-transform-hmr@1.0.4:
     react-proxy "^1.1.7"
 
 react@^16.5.2:
-  version "16.8.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.2.tgz#83064596feaa98d9c2857c4deae1848b542c9c0c"
-  integrity sha512-aB2ctx9uQ9vo09HVknqv3DGRpI7OIGJhCx3Bt0QqoRluEjHSaObJl+nG12GDdYH6sTgE7YiPJ6ZUyMx9kICdXw==
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
+  integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.2"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
