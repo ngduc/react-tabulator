@@ -3,6 +3,7 @@
   "version": "0.9.5",
   "description": "React Tabulator component",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "module": "es/index.js",
   "files": [
     "css",
@@ -11,13 +12,13 @@
     "umd"
   ],
   "scripts": {
-    "build": "npm run clean && tsc --outDir ./lib --jsx react ./src/index.tsx && npm run postbuild",
+    "build": "npm run clean && tsc --outDir ./lib --jsx react --declaration ./src/index.ts && npm run postbuild",
     "postbuild": "cp ./src/styles.css ./lib/ && cp -R ./src/css ./lib && cp ./src/styles.css ./ && cp -R ./src/css ./",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo --port 3003",
     "dev": "NODE_ENV=dev concurrently --kill-others \"npm run dev:watch\" \"npm run start\"",
-    "dev:watch": "tsc --outDir ./lib --jsx react --watch ./src/index.tsx",
+    "dev:watch": "tsc --outDir ./lib --jsx react --declaration --watch ./src/index.ts",
     "test": "NODE_ENV=test HEADLESS=true jest --config=./jest-config.js --verbose",
     "test:watch": "NODE_ENV=test HEADLESS=true jest --config=./jest-config.js --verbose --watchAll",
     "start-test-ui": "nwb react run ./__tests__/ui/index.js --port 3003",
