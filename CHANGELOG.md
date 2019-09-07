@@ -1,9 +1,10 @@
-## [0.9.5] - 2019-03-15
+## [0.9.6] - 2019-09-06
 
 ### Changed
 - upgraded tabulator to 4.4.1
 - upgraded dependencies
 - merged PR #75 - thanks @maco222
+- merged PR #88 - generate type files - thanks @mstlaurent-paradigm
 
 ## [0.9.1] - 2019-03-15
 

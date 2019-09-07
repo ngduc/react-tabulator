@@ -106,6 +106,8 @@ export interface IProps {
   downloadDataFormatter?: any;
   downloadReady?: any;
   downloadComplete?: any;
+
+  // NOTE: you can directly pass *any* tabulator options via this. (see README)
   options?: any; // Tabulator options object
 }
 
