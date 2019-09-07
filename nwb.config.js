@@ -13,5 +13,8 @@ module.exports = {
         rules: [{ test: /\.(ts|tsx?)$/, loader: 'awesome-typescript-loader' }]
       }
     }
+  },
+  devServer: {
+    disableHostCheck: true
   }
 };

@@ -88,6 +88,46 @@ export default class extends React.Component<IProps> {
     this.setState({ data: [] });
   };
 
+  renderAjaxScrollExample = () => {
+    const columns = [
+      { title: 'First Name', field: 'first_name', width: 150 },
+      { title: 'Last Name', field: 'last_name', width: 150 },
+      { title: 'Email', field: 'email', width: 150 },
+    ]
+    const options = {
+      height: 150,
+      movableRows: true,
+      ajaxProgressiveLoad: 'scroll',
+      ajaxProgressiveLoadDelay: 200,
+      ajaxProgressiveLoadScrollMargin: 100,
+      ajaxURL: 'https://reqres.in/api/users',
+      paginationDataSent: {
+        page: 'page',
+        size: 'per_page' // change 'size' param to 'per_page'
+      },
+      paginationDataReceived: {
+        last_page: 'total_pages'
+      },
+      current_page: 1,
+      paginationSize: 3,
+      ajaxResponse: function(url, params, response) {
+        console.log('ajaxResponse', url);
+        return response; //return the response data to tabulator
+      },
+      ajaxError: function(error) {
+        console.log('ajaxError', error);
+      }
+    }
+    return (
+      <ReactTabulator
+          ref={ref => (this.ref = ref)}
+          columns={columns}
+          data={[]}
+          options={options}
+        />
+    )
+  }
+
   render() {
     const options = {
       height: 150,
@@ -119,6 +159,9 @@ export default class extends React.Component<IProps> {
           dataEdited={(newData: any) => console.log('dataEdited', newData)}
           footerElement={<span>Footer</span>}
         />
+
+        <h3>Infinite Scrolling with Ajax Requests</h3>
+        {this.renderAjaxScrollExample()}
 
         <p>
           <a href="https://github.com/ngduc/react-tabulator" target="_blank">

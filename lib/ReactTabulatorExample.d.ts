@@ -8,6 +8,7 @@ export default class extends React.Component<IProps> {
     rowClick: (e: any, row: any) => void;
     setData: () => void;
     clearData: () => void;
+    renderAjaxScrollExample: () => JSX.Element;
     render(): JSX.Element;
 }
 export {};

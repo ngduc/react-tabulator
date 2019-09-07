@@ -1,5 +1,8 @@
 ## [0.9.6] - 2019-09-06
 
+### Added
+- example for Infinite Scrolling with Ajax Requests
+
 ### Changed
 - upgraded tabulator to 4.4.1
 - upgraded dependencies
