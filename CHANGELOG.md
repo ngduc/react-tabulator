@@ -1,6 +1,7 @@
-## [0.10.0] - 2019-10-05
+## [0.10.1] - 2019-10-05
 
 ### Changed
+- upgraded tabulator to 4.4.3
 - fixed: critical bug: componentDidUpdate keeps re-rendering table (issue [#82](https://github.com/ngduc/react-tabulator/issues/82))
 
 ## [0.9.6] - 2019-09-06

@@ -10,3 +10,4 @@ To upgrade tabulator:
 - run ```$ yarn build```
 - update CHANGELOG
 - commit & push & npm publish
+- github: create a release (tag)
