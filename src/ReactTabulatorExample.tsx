@@ -72,13 +72,15 @@ interface IProps {
 
 export default class extends React.Component<IProps> {
   state: any = {
-    data: []
+    data: [],
+    selectedName: ''
   };
   ref: any = null;
 
   rowClick = (e: any, row: any) => {
     console.log('ref table: ', this.ref.table); // this is the Tabulator table instance
     console.log('rowClick id: ${row.getData().id}', row, e);
+    this.setState({ selectedName: row.getData().name });
   };
 
   setData = () => {
@@ -144,6 +146,7 @@ export default class extends React.Component<IProps> {
           data-custom-attr="test-custom-attribute"
           className="custom-css-class"
         />
+        <div>Selected Name: {this.state.selectedName}</div>
 
         <h3>
           Asynchronous data: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>{' '}

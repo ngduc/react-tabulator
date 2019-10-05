@@ -12,7 +12,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
     componentDidMount(): void;
     componentWillUnmount(): void;
     static getDerivedStateFromProps(props: any, state: any): any;
-    componentDidUpdate(): void;
+    componentDidUpdate(prevProps: IProps, prevState: IState): void;
     pickValidHTMLProps: () => void;
     render(): JSX.Element;
 }

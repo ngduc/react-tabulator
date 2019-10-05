@@ -67,6 +67,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
     if (state && props.data) {
       // this triggers componentDidUpdate
       if (!isSameArray(state.data, props.data)) {
+        // console.log('data changed!');
         return { ...state, data: props.data };
       }
     }
@@ -74,8 +75,12 @@ export default class extends React.Component<IProps, Partial<IState>> {
   }
 
   // componentDidUpdate(prevProps, prevState)
-  componentDidUpdate() {
-    this.table.setData(this.state.data);
+  componentDidUpdate(prevProps: IProps, prevState: IState) {
+    // props data changed! (see: getDerivedStateFromProps)
+    if (!isSameArray(prevState.data, this.state.data)) {
+      // only when data is really different: call this.table.setData (will re-render table)
+      this.table.setData(this.state.data);
+    }
   }
 
   pickValidHTMLProps = () => {
