@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "React Tabulator component",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -44,14 +44,14 @@
   "dependencies": {
     "@types/react-tag-autocomplete": "^5.6.0",
     "date-fns": "v2.0.0-alpha.25",
-    "dotenv": "^6.1.0",
+    "dotenv": "^8.2.0",
     "pick-react-known-prop": "^0.1.5",
     "react-tag-autocomplete": "^5.7.1",
     "tabulator-tables": "^4.4.3"
   },
   "peerDependencies": {
     "react": ">=15.6.2 || ^16.0.0",
-    "react-dom": ">=15.6.2  || ^16.0.0"
+    "react-dom": ">=15.6.2 || ^16.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
@@ -59,7 +59,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "^23.6.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "concurrently": "^4.0.1",
+    "concurrently": "^5.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "event-stream": "3.3.4",

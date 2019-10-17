@@ -1,3 +1,9 @@
+## [0.10.3] - 2019-10-16
+
+### Changed
+- merged PR #130: clone props.data
+- upgraded tooling modules
+
 ## [0.10.2] - 2019-10-05
 
 ### Changed
