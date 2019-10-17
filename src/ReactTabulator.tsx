@@ -68,7 +68,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
       // this triggers componentDidUpdate
       if (!isSameArray(state.data, props.data)) {
         // console.log('data changed!');
-        return { ...state, data: props.data };
+        return { ...state, data: [...props.data] };
       }
     }
     return {};
