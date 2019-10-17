@@ -85,8 +85,9 @@
     "@types/react" "*"
 
 "@types/react-tag-autocomplete@^5.6.0":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@types/react-tag-autocomplete/-/react-tag-autocomplete-5.6.0.tgz#26a9af61f78e0d6a669b37a09ddd97dbb30bffcc"
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/@types/react-tag-autocomplete/-/react-tag-autocomplete-5.6.1.tgz#02a40add1b67b92b434d7617c05183d5de361054"
+  integrity sha512-hhNDK03o1TZQ/CD7I0U4kSNyGQfblty+a9PZ3LjXYq5x8Y2Eu6l192UZ60kyiFUxGV3rlHlmFVf6cN7/6NJpPg==
   dependencies:
     "@types/react" "*"
 
