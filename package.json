@@ -62,7 +62,7 @@
     "concurrently": "^5.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
-    "event-stream": "3.3.4",
+    "event-stream": "4.0.1",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "jest-puppeteer": "^4.3.0",
