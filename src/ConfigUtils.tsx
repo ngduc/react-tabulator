@@ -131,7 +131,6 @@ export const propsToOptions = (props: any) => {
     'rowAdded','rowDeleted','rowMoved','rowUpdated','rowSelectionChanged','rowSelected','rowDeselected','rowResized',
     'cellClick','cellDblClick','cellContext','cellTap','cellDblTap','cellTapHold','cellEditing','cellEdited','cellEditCancelled',
     'columnMoved','columnResized','columnTitleChanged','columnVisibilityChanged',
-    'headerClick','headerDblClick','headerContext','headerTap','headerDblTap','headerTapHold',
     'htmlImporting','htmlImported','dataLoading','dataLoaded','dataEdited',
     'ajaxRequesting','ajaxResponse','ajaxError','dataFiltering','dataFiltered','dataSorting','dataSorted',
     'renderStarted','renderComplete','pageLoaded','localized','dataGrouping','dataGrouped',
