@@ -62,7 +62,7 @@
     "concurrently": "^5.0.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
-    "event-stream": "3.3.4",
+    "event-stream": "4.0.1",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
     "jest-puppeteer": "^4.3.0",
@@ -74,7 +74,7 @@
     "tslint-config-airbnb": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.8.3"
   },
   "resolutions": {
     "cryptiles": "^4.1.2",
