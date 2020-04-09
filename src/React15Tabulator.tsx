@@ -9,11 +9,13 @@ const Tabulator = require('tabulator-tables');
 
 interface IState {
   data: any[];
+  columns: any[];
 }
 
 export default class extends React.Component<IProps, Partial<IState>> {
   state: IState = {
-    data: []
+    data: [],
+    columns: this.props.columns
   };
 
   ref: any = null;
@@ -55,9 +57,15 @@ export default class extends React.Component<IProps, Partial<IState>> {
   // this is for React 15.x only
   componentWillReceiveProps(props: IProps) {
     if (!isSameArray(this.state.data, props.data)) {
-      // console.log('- componentWillReceiveProps');
+      // console.log('- data changed');
       this.setState({ data: props.data }, () => {
         this.table.setData(this.state.data);
+      });
+    }
+    if (!isSameArray(this.state.columns, props.columns)) {
+      // console.log('- columns changed');
+      this.setState({ columns: props.columns }, () => {
+        this.table.setColumns(this.state.columns);
       });
     }
   }

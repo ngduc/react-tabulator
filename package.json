@@ -1,7 +1,7 @@
 {
   "name": "react-tabulator",
-  "version": "0.11.5",
-  "description": "React Tabulator component",
+  "version": "0.11.7",
+  "description": "React Tabulator is based on tabulator - a JS table library with many advanced features.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "module": "es/index.js",

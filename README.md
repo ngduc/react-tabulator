@@ -50,7 +50,7 @@ import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import 
 Require: `NodeJS v8.12.0 +` and `yarn` (optional)
 
 ```
-$ npm run dev      Launch DEV mode
+$ npm run dev      Launch DEV mode (with hot reload)
 $ npm run build    Make a build
 
 $ npm run test     Run tests using jest-puppeteer (with headless Chrome)

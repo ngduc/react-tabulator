@@ -9,11 +9,13 @@ const Tabulator = require('tabulator-tables');
 
 interface IState {
   data: any[];
+  columns: any[];
 }
 
 export default class extends React.Component<IProps, Partial<IState>> {
   state: IState = {
-    data: []
+    data: [],
+    columns: this.props.columns
   };
 
   ref: any = null;
@@ -64,11 +66,19 @@ export default class extends React.Component<IProps, Partial<IState>> {
     if (state && state.data.length && state.data.length === 0 && props && props.data && props.data.length === 0) {
       return null;
     }
-    if (state && props.data) {
+    // if (state && props.columns) {
+    //   // this triggers componentDidUpdate
+    //   if (!isSameArray(state.columns, props.columns)) {
+    //     console.log('--- Columns changed');
+    //     // console.log('columns changed!');
+    //     return { ...state, columns: [...props.columns] };
+    //   }
+    // }
+    if (state && (props.data || props.columns)) {
       // this triggers componentDidUpdate
-      if (!isSameArray(state.data, props.data)) {
+      if (!isSameArray(state.data, props.data) || !isSameArray(state.columns, props.columns)) {
         // console.log('data changed!');
-        return { ...state, data: [...props.data] };
+        return { ...state, data: [...props.data], columns: [...props.columns] };
       }
     }
     return {};
@@ -80,6 +90,10 @@ export default class extends React.Component<IProps, Partial<IState>> {
     if (!isSameArray(prevState.data, this.state.data)) {
       // only when data is really different: call this.table.setData (will re-render table)
       this.table.setData(this.state.data);
+    }
+    if (!isSameArray(prevState.columns, this.state.columns)) {
+      // only when data is really different: call this.table.setData (will re-render table)
+      this.table.setColumns(this.state.columns);
     }
   }
 

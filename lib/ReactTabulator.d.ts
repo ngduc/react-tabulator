@@ -2,6 +2,7 @@ import * as React from 'react';
 import { IProps } from './ConfigUtils';
 interface IState {
     data: any[];
+    columns: any[];
 }
 export default class extends React.Component<IProps, Partial<IState>> {
     state: IState;
