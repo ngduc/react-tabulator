@@ -4,14 +4,16 @@ React Tabulator
 
 ### Todo
 
-- [ ] Example for Add Row  
+- [ ] example for Add Row  
 
 ### In Progress
 
-- [ ] Upgrade dependencies  
+- [ ] upgrade dependencies  
 
 ### Done ✓
 
+- [x] capture a GIF demo  
+- [x] remove date-fns  
 - [x] add TODO.md  
 - [x] upgrade tabulator to 4.6.1  
 

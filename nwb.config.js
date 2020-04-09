@@ -12,6 +12,9 @@ module.exports = {
       module: {
         rules: [{ test: /\.(ts|tsx?)$/, loader: 'awesome-typescript-loader' }]
       }
+    },
+    html: {
+      template: 'demo/src/template.html'
     }
   },
   devServer: {
