@@ -56,6 +56,8 @@ $ npm run build    Make a build
 $ npm run test     Run tests using jest-puppeteer (with headless Chrome)
 ```
 
+Development - see [docs/development.md](docs/development.md)
+
 ### 📖 Documentation
 
 - [Change Log](/CHANGELOG.md)

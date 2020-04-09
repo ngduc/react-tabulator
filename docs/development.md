@@ -1,5 +1,7 @@
 ## Development
 
+NodeJS 8.15+
+
 ### Upgrade Tabulator
 
 To upgrade tabulator:
