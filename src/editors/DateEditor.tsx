@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { parse, format } from 'date-fns';
+// import { parse, format } from 'date-fns';
+import { parse, format } from './DateEditorUtils';
 
-const DEFAULT_DATE_INPUT_FORMAT = 'yyyy-MM-dd';
+const DEFAULT_DATE_INPUT_FORMAT = 'YYYY-MM-DD'; // date-fns 'yyyy-MM-dd';
 
 const inputCss = {
   width: '100%',
@@ -22,7 +23,8 @@ interface IProps {
 class Editor extends React.Component<IProps> {
   state = { value: '' };
   ref: any = null;
-  format = this.props.editorParams.format || 'MM/dd/yyyy'; // TODO: detect from user locale & set default.
+  // date-fns format 'MM/dd/yyyy'
+  format = this.props.editorParams.format || 'MM/DD/YYYY'; // TODO: detect from user locale & set default.
 
   componentDidMount() {
     this.props.onRendered(() => {
@@ -34,10 +36,22 @@ class Editor extends React.Component<IProps> {
 
   setValueOnSuccess = (value = this.state.value) => {
     const { success } = this.props;
+    if (!value) {
+      // user deleted value in the cell => set to ''
+      // const result = format(new Date(), this.format);
+      success('');
+      return
+    }
     let result = value;
-    if (result.indexOf('-') > 0) {
-      // value is "yyyy-MM-dd" => parse it
-      result = format(value, this.format);
+    try {
+      if (result.indexOf('-') > 0) {
+        // value is "yyyy-MM-dd" => parse it
+        const valueDate = parse(value, 'YYYY-MM-DD');
+        result = format(valueDate, this.format);
+      }
+    } catch(err) {
+      console.error('ERROR', err);
+      result = format(new Date(), DEFAULT_DATE_INPUT_FORMAT);
     }
     success(result);
   };
@@ -50,7 +64,10 @@ class Editor extends React.Component<IProps> {
   onKeyPress = (ev: any) => {
     const { cancel } = this.props;
     if (ev.keyCode === 13) {
-      this.setValueOnSuccess();
+      // Enter pressed. If value is '' => set to today:
+      const today = format(new Date(), DEFAULT_DATE_INPUT_FORMAT);
+      const value = this.state.value || today;
+      this.setValueOnSuccess(value);
     } else if (ev.keyCode === 27) {
       cancel();
     }
@@ -62,8 +79,15 @@ class Editor extends React.Component<IProps> {
 
   render() {
     const { cell } = this.props;
-    const valueDt = parse(cell.getValue(), this.format, new Date(), { awareOfUnicodeTokens: true });
-    const value = format(valueDt, DEFAULT_DATE_INPUT_FORMAT);
+    const valueDt = parse(cell.getValue(), this.format);
+    // console.log('this.format', this.format);
+    // console.log('cell.getValue()', cell.getValue());
+    // console.log('valueDt', valueDt);
+
+    let value = format(new Date(), DEFAULT_DATE_INPUT_FORMAT)
+    try {
+      value = format(valueDt, DEFAULT_DATE_INPUT_FORMAT);
+    } catch(err) {}
 
     return (
       <input

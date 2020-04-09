@@ -16,7 +16,7 @@ const columns = [
   { title: 'Name', field: 'name', width: 150 },
   { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress' },
   { title: 'Favourite Color', field: 'color' },
-  { title: 'Date Of Birth', field: 'dob' },
+  { title: 'Date Of Birth', field: 'dob', sorter: 'date' },
   { title: 'Rating', field: 'rating', hozAlign: 'center', formatter: 'star' },
   { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross' },
   { title: 'Custom', field: 'custom', hozAlign: 'center', formatter: reactFormatter(<SimpleButton />) },
@@ -54,7 +54,7 @@ const editableColumns = [
     headerFilter: 'select',
     headerFilterParams: { values: colorOptions }
   },
-  { title: 'Date Of Birth', field: 'dob', editor: DateEditor, editorParams: { format: 'MM/dd/yyyy' } },
+  { title: 'Date Of Birth', field: 'dob', editor: DateEditor, editorParams: { format: 'MM/DD/YYYY' } },
   {
     title: 'Pets',
     field: 'pets',

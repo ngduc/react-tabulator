@@ -1,6 +1,8 @@
-## [0.11.1] - 2020-04-08
+## [0.11.5] - 2020-04-08
 
 ### Changed
+- BREAKING: removed date-fns dependency. DateEditor now uses taylorhakes/fecha code: Date format string changed to 'MM/DD/YYYY'.
+
 - merged PRs #141 #168
 - upgraded tabulator to 4.6.1
 - use TODO.md - https://marketplace.visualstudio.com/items?itemName=coddx.coddx-alpha
