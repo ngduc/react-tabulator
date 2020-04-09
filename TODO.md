@@ -4,7 +4,7 @@ React Tabulator
 
 ### Todo
 
-- [ ] Todo task  
+- [ ] Example for Add Row  
 
 ### In Progress
 

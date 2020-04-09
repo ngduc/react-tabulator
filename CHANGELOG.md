@@ -1,9 +1,10 @@
-## [0.11.0] - 2020-04-08
+## [0.11.1] - 2020-04-08
 
 ### Changed
 - merged PRs #141 #168
 - upgraded tabulator to 4.6.1
 - use TODO.md - https://marketplace.visualstudio.com/items?itemName=coddx.coddx-alpha
+- package.json - resolve packages to avoid security risks.
 
 ## [0.10.3] - 2019-10-16
 
