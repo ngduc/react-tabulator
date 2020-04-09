@@ -8,8 +8,9 @@ import MultiValueFormatter from './formatters/MultiValueFormatter';
 import { reactFormatter } from './Utils';
 
 function SimpleButton (props: any) {
-  const cellData = props.cell._cell.row.data;
-  return <button onClick={() => alert(cellData.name)}>Show</button>
+  const rowData = props.cell._cell.row.data;
+  const cellValue = props.cell._cell.value || 'Edit | Show';
+  return <button onClick={() => alert(rowData.name)}>{cellValue}</button>
 }
 
 const columns = [
@@ -19,7 +20,7 @@ const columns = [
   { title: 'Date Of Birth', field: 'dob', sorter: 'date' },
   { title: 'Rating', field: 'rating', hozAlign: 'center', formatter: 'star' },
   { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross' },
-  { title: 'Custom', field: 'custom', hozAlign: 'center', formatter: reactFormatter(<SimpleButton />) },
+  { title: 'Custom', field: 'custom', hozAlign: 'center', editor: 'input', formatter: reactFormatter(<SimpleButton />) },
 ];
 const data = [
   { id: 1, name: 'Oli Bob', age: '12', color: 'red', dob: '01/01/1980', rating: 5, passed: true, pets: ['cat', 'dog'] },

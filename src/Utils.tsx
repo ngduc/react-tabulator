@@ -23,11 +23,18 @@ export function reactFormatter(JSX: any) {
     //cell - the cell component
     //formatterParams - parameters set for the column
     //onRendered - function to call when the formatter has been rendered
-    onRendered(() => {
+
+    const renderFn = () => {
       const cellEl = cell.getElement();
       const CompWithMoreProps = React.cloneElement(JSX, { cell });
       render(CompWithMoreProps, cellEl.querySelector('.formatterCell'));
-    });
+    }
+
+    onRendered(renderFn); // initial render only.
+
+    setTimeout(() => {
+      renderFn(); // render every time cell value changed.
+    }, 0)
     return '<div class="formatterCell"></div>';
   }
 }

@@ -1,4 +1,4 @@
-## [0.11.7] - 2020-04-08
+## [0.12.0] - 2020-04-09
 
 ### Changed
 - BREAKING: removed date-fns dependency. DateEditor now uses taylorhakes/fecha code: Date format string changed to 'MM/DD/YYYY'.
@@ -8,6 +8,8 @@
 - use TODO.md - https://marketplace.visualstudio.com/items?itemName=coddx.coddx-alpha
 - package.json - resolve packages to avoid security risks.
 - fixed: setColumns when columns prop changed #158
+- fixed: Invalid table constructor wanings #102
+- fixed: React formatter isn't re-rendering after an edit #151
 
 ## [0.10.3] - 2019-10-16
 

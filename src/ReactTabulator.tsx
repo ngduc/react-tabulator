@@ -40,6 +40,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
       dataLoaded() {
         that.props.dataLoaded ? that.props.dataLoaded() : '';
       },
+      invalidOptionWarnings: false, // #102: disable console warnings for invalid table properties
       ...options, // props.options are passed to Tabulator's options.
       data
     });
