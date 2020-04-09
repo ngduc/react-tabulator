@@ -21,6 +21,7 @@ export interface IProps {
 	tooltipGenerationMode?: string, // when to generate tooltips - default: 'load'
 	initialSort?: boolean, // initial sorting criteria - default: false
 	initialFilter?: boolean, // initial filtering criteria - default: false
+	initialHeaderFilter?: boolean, // initial filtering criteria - default: false
 	footerElement?: any, // hold footer element - default: false
 	index?: string, // filed for row index - default: 'id'
 	keybindings?:[], // array for keybindings - default: []
@@ -117,7 +118,7 @@ export const propsToOptions = (props: any) => {
 
   const defaultOptions = ['height', 'layout', 'layoutColumnsOnNewData', 'columnMinWidth', 'columnVertAlign',
   'resizableColumns', 'resizableRows', 'autoResize', 'tooltips', 'tooltipsHeader', 'tooltipGenerationMode',
-  'initialSort', 'initialFilter', 'footerElement', 'index', 'keybindings', 'clipboard', 'clipboardCopyStyled',
+  'initialSort', 'initialFilter', 'initialHeaderFilter', 'footerElement', 'index', 'keybindings', 'clipboard', 'clipboardCopyStyled',
   'clipboardCopySelector', 'clipboardCopyFormatter', 'clipboardCopyHeader', 'clipboardPasteParser',
   'clipboardPasteAction', 'rowFormatter', 'placeholder']
 
