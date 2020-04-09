@@ -8281,9 +8281,10 @@ symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
-tabulator-tables@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.4.3.tgz#44a435e3bc9ed8d6334a0ac491224f6341719641"
+tabulator-tables@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.6.1.tgz#221a5f0f26c9b225784fcda7f4fd7eaefe8ac7ba"
+  integrity sha512-e6wFIXDBnyr6tzvp7jfAT/N/74jj/af50turmjYVVNB5K7TmTD7GprR69TvqMlfmlsQaaPImMoKqNepa6bkJPQ==
 
 tapable@^1.0.0:
   version "1.1.0"

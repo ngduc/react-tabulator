@@ -15,6 +15,7 @@ export interface IProps {
     tooltipGenerationMode?: string;
     initialSort?: boolean;
     initialFilter?: boolean;
+    initialHeaderFilter?: boolean;
     footerElement?: any;
     index?: string;
     keybindings?: [];

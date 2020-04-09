@@ -58,12 +58,15 @@ $ npm run test     Run tests using jest-puppeteer (with headless Chrome)
 
 ### 📖 Documentation
 
-[Change Log](/CHANGELOG.md)
+- [Change Log](/CHANGELOG.md)
+- [Todo / Roadmap](/TODO.md)
 
 ### 🙌 Thanks
 
 All contributions are welcome!
 
-[Tabulator](https://github.com/olifolkerd/tabulator)
+- Main library [olifolkerd/tabulator](https://github.com/olifolkerd/tabulator) (Thanks olifolkerd for this great library!)
 
-While you're here, also check out [ui-form-field](https://github.com/ngduc/ui-form-field) - an easy way to build Forms with React.
+While you're here, also check out
+- [ui-form-field](https://github.com/ngduc/ui-form-field) - an easy way to build Forms with React.
+- [VSCode - TODO.md Kanban Board](https://marketplace.visualstudio.com/items?itemName=coddx.coddx-alpha)
