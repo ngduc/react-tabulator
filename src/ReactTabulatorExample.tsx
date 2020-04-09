@@ -14,12 +14,12 @@ function SimpleButton (props: any) {
 
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
-  { title: 'Age', field: 'age', align: 'left', formatter: 'progress' },
+  { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress' },
   { title: 'Favourite Color', field: 'color' },
   { title: 'Date Of Birth', field: 'dob' },
-  { title: 'Rating', field: 'rating', align: 'center', formatter: 'star' },
-  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' },
-  { title: 'Custom', field: 'custom', align: 'center', formatter: reactFormatter(<SimpleButton />) },
+  { title: 'Rating', field: 'rating', hozAlign: 'center', formatter: 'star' },
+  { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross' },
+  { title: 'Custom', field: 'custom', hozAlign: 'center', formatter: reactFormatter(<SimpleButton />) },
 ];
 const data = [
   { id: 1, name: 'Oli Bob', age: '12', color: 'red', dob: '01/01/1980', rating: 5, passed: true, pets: ['cat', 'dog'] },
@@ -45,7 +45,7 @@ const colorOptions = { ['']: '&nbsp;', red: 'red', green: 'green', yellow: 'yell
 const petOptions = [{ id: 'cat', name: 'cat' }, { id: 'dog', name: 'dog' }, { id: 'fish', name: 'fish' }];
 const editableColumns = [
   { title: 'Name', field: 'name', width: 150, editor: 'input', headerFilter: 'input' },
-  { title: 'Age', field: 'age', align: 'left', formatter: 'progress', editor: 'progress' },
+  { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress', editor: 'progress' },
   {
     title: 'Favourite Color',
     field: 'color',
@@ -63,7 +63,7 @@ const editableColumns = [
     formatter: MultiValueFormatter,
     formatterParams: { style: 'PILL' }
   },
-  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross', editor: true }
+  { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross', editor: true }
 ];
 
 interface IProps {

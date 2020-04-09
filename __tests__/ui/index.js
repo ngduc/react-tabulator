@@ -6,11 +6,11 @@ import { ReactTabulator } from '../../lib';
 
 const columns = [
   { title: 'Name', field: 'name', width: 150 },
-  { title: 'Age', field: 'age', align: 'left', formatter: 'progress' },
+  { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress' },
   { title: 'Favourite Color', field: 'col' },
-  { title: 'Date Of Birth', field: 'dob', align: 'center' },
-  { title: 'Rating', field: 'rating', align: 'center', formatter: 'star' },
-  { title: 'Passed?', field: 'passed', align: 'center', formatter: 'tickCross' }
+  { title: 'Date Of Birth', field: 'dob', hozAlign: 'center' },
+  { title: 'Rating', field: 'rating', hozAlign: 'center', formatter: 'star' },
+  { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross' }
 ];
 const data = [
   { id: 1, name: 'Oli Bob', age: '12', col: 'red', dob: '', rating: 5, passed: true },
