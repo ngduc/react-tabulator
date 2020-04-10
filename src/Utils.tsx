@@ -26,8 +26,13 @@ export function reactFormatter(JSX: any) {
 
     const renderFn = () => {
       const cellEl = cell.getElement();
-      const CompWithMoreProps = React.cloneElement(JSX, { cell });
-      render(CompWithMoreProps, cellEl.querySelector('.formatterCell'));
+      if (cellEl) {
+        const formatterCell = cellEl.querySelector('.formatterCell')
+        if (formatterCell) {
+          const CompWithMoreProps = React.cloneElement(JSX, { cell });
+          render(CompWithMoreProps, cellEl.querySelector('.formatterCell'));
+        }
+      }
     }
 
     onRendered(renderFn); // initial render only.

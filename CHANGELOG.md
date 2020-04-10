@@ -1,4 +1,4 @@
-## [0.12.0] - 2020-04-09
+## [0.12.1] - 2020-04-09
 
 ### Changed
 - BREAKING: removed date-fns dependency. DateEditor now uses taylorhakes/fecha code: Date format string changed to 'MM/DD/YYYY'.

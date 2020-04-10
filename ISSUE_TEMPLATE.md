@@ -1,19 +1,17 @@
 **Title**
-- bug: XYZ broken...
-- feature: please add...
-- enhancement: add this to existing features...
-
-**Short Description:**
-- Unable to get a result from blah...
+  - bug: XYZ broken...
+  - feature: please add...
+  - enhancement: add this to existing features...
   
 **Environment Details**
+  * react-tabulator version:
   * OS:
   * Node.js version:
 
 **Long Description**
-- (and screenshot)
+  - please add screenshot(s)
+  - please add a Codesandbox link
 
-**Code**
 ```JS
 JS code example goes here... (a Codesandbox link is preferred)
 ```
@@ -22,4 +20,4 @@ JS code example goes here... (a Codesandbox link is preferred)
 
 ...
 
-Please help with a PR if you have a solution. Thanks!
+(Please help with a PR if you have a solution. Thanks!)
