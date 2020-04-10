@@ -162,6 +162,7 @@ export default class extends React.Component<IProps> {
           cellEdited={(cell: any) => console.log('cellEdited', cell)}
           dataEdited={(newData: any) => console.log('dataEdited', newData)}
           footerElement={<span>Footer</span>}
+          options={{ movableColumns: true, movableRows: true }}
         />
 
         <h3>Infinite Scrolling with Ajax Requests</h3>

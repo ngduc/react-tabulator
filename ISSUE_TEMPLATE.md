@@ -9,14 +9,13 @@
 **Environment Details**
   * OS:
   * Node.js version:
-  * npm version:
 
 **Long Description**
-- etc.
+- (and screenshot)
 
 **Code**
 ```JS
-JS code example goes here...
+JS code example goes here... (a Codesandbox link is preferred)
 ```
 
 **Workaround**
