@@ -120,7 +120,7 @@ export const propsToOptions = (props: any) => {
   'resizableColumns', 'resizableRows', 'autoResize', 'tooltips', 'tooltipsHeader', 'tooltipGenerationMode',
   'initialSort', 'initialFilter', 'initialHeaderFilter', 'footerElement', 'index', 'keybindings', 'clipboard', 'clipboardCopyStyled',
   'clipboardCopySelector', 'clipboardCopyFormatter', 'clipboardCopyHeader', 'clipboardPasteParser',
-  'clipboardPasteAction', 'rowFormatter', 'placeholder']
+  'clipboardPasteAction', 'rowFormatter', 'placeholder', 'selectable']
 
   for (const opt of defaultOptions) {
     if (typeof props[opt] !== 'undefined') {

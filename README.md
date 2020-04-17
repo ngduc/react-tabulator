@@ -44,6 +44,7 @@ import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import 
 
 - Code Example: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
 - Code Example (React 15.x): [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
+- [More Codesandbox Examples](/docs/examples.md)
 
 ### 🔧 Commands
 

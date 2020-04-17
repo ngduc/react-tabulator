@@ -5,6 +5,7 @@ React Tabulator
 ### Todo
 
 - [ ] example for Add Row  
+- [ ] add / generate more types  
 
 ### In Progress
 
@@ -12,6 +13,7 @@ React Tabulator
 
 ### Done ✓
 
+- [x] add more Codesandbox examples  
 - [x] capture a GIF demo  
 - [x] remove date-fns  
 - [x] add TODO.md  

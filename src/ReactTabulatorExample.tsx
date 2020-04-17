@@ -59,6 +59,7 @@ const editableColumns = [
   {
     title: 'Pets',
     field: 'pets',
+    sorter: (a: string[], b: string[]) => a.toString().localeCompare(b.toString()),
     editor: MultiSelectEditor,
     editorParams: { values: petOptions },
     formatter: MultiValueFormatter,
