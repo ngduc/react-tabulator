@@ -103,4 +103,4 @@ export interface IProps {
     downloadComplete?: any;
     options?: any;
 }
-export declare const propsToOptions: (props: any) => any;
+export declare const propsToOptions: (props: any) => Promise<any>;

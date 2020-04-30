@@ -1,3 +1,6 @@
+## [0.12.3] - 2020-04-29
+- fixed: use ReactDOM.render instead of renderToString
+
 ## [0.12.1] - 2020-04-09
 
 ### Changed

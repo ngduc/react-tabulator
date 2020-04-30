@@ -10,7 +10,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
     htmlProps: any;
     mainId: string;
     table: any;
-    componentDidMount(): void;
+    componentDidMount(): Promise<void>;
     componentWillUnmount(): void;
     static getDerivedStateFromProps(props: any, state: any): any;
     componentDidUpdate(prevProps: IProps, prevState: IState): void;

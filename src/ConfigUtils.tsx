@@ -1,4 +1,5 @@
-import { renderToString } from 'react-dom/server';
+import * as Es6Promise from 'es6-promise' // without this, 'yarn build' will complain about Promise.
+import { render } from 'react-dom';
 
 // .prettierignore    (to keep relevant props together)
 const NOOPS = () => {};
@@ -112,8 +113,16 @@ export interface IProps {
   options?: any; // Tabulator options object
 }
 
+function syncRender(comp: any, el: any): any {
+  return new Es6Promise.Promise(function(resolve, reject) {
+    render(comp, el, () => {
+      resolve(el)
+    })
+  });
+}
+
 // get callbacks from props (default: NOOP) to set them to Tabulator options later.
-export const propsToOptions = (props: any) => {
+export const propsToOptions = async (props: any) => {
   const output: any = {}
 
   const defaultOptions = ['height', 'layout', 'layoutColumnsOnNewData', 'columnMinWidth', 'columnVertAlign',
@@ -145,7 +154,8 @@ export const propsToOptions = (props: any) => {
   }
   if (typeof props['footerElement'] === 'object') {
     // convert from JSX to HTML string (tabulator's footerElement accepts string)
-    output['footerElement'] = renderToString(props['footerElement'])
+    const el = await syncRender(props['footerElement'], document.createElement('div'))
+    output['footerElement'] = el.innerHTML
   }
   return output
 }
