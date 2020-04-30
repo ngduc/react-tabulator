@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.12.3",
+  "version": "0.12.5",
   "description": "React Tabulator is based on tabulator - a JS table library with many advanced features.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -46,7 +46,7 @@
     "dotenv": "^8.2.0",
     "pick-react-known-prop": "^0.1.5",
     "react-tag-autocomplete": "^5.7.1",
-    "tabulator-tables": "^4.6.1"
+    "tabulator-tables": "^4.6.2"
   },
   "peerDependencies": {
     "react": ">=15.6.2 || ^16.0.0",
