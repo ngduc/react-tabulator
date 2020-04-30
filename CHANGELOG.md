@@ -1,4 +1,4 @@
-## [0.12.6] - 2020-04-29
+## [0.12.7] - 2020-04-29
 - upgraded tabulator to 4.6.2
 - fixed: use ReactDOM.render instead of renderToString
 

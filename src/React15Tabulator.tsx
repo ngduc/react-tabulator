@@ -23,11 +23,11 @@ export default class extends React.Component<IProps, Partial<IState>> {
   mainId = `tabulator-${+new Date()}-${Math.floor(Math.random() * 9999999)}`; // random id
   table: any = null; // will be set once Tabulator instantiated
 
-  componentDidMount() {
+  async componentDidMount() {
     const domEle: any = ReactDOM.findDOMNode(this.ref); // mounted DOM element
     const that = this;
     const { columns, data, options } = this.props;
-    const propOptions = propsToOptions(this.props);
+    const propOptions = await propsToOptions(this.props);
 
     new Tabulator(domEle, {
       columns,
