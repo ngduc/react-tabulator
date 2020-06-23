@@ -10,7 +10,7 @@ export interface IProps {
   columns: any[];
   data: any[];
   height?: number;
-  layout?: string, /// layout type "fitColumns" | "fitData" - default: "fitData"
+  layout?: string, /// layout type "fitColumns" | "fitDataTable" | "fitDataStretch" | "fitData" - default: "fitData"
 	layoutColumnsOnNewData?: boolean, // update column widths on setData - default: false
 	columnMinWidth?: number, // minimum global width for a column - default: 40
 	columnVertAlign?: string, // vertical alignment of column headers - default: 'top'
