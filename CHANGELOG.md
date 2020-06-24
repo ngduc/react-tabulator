@@ -1,3 +1,7 @@
+## [0.13.0] - 2020-06-24
+- upgraded tabulator to 4.7.0
+- feat: CI: moved from Travis to Github Action.
+
 ## [0.12.7] - 2020-04-29
 - upgraded tabulator to 4.6.2
 - fixed: use ReactDOM.render instead of renderToString

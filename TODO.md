@@ -2,7 +2,7 @@
 
 React Tabulator
 
-<em>[TODO.md spec & Kanban Board](http://todomd.org)</em>
+<em>[TODO.md spec & Kanban Board](https://marketplace.visualstudio.com/items?itemName=coddx.coddx-alpha)</em>
 
 ### Todo
 
@@ -15,6 +15,7 @@ React Tabulator
 
 ### Done ✓
 
+- [x] use Github Action  
 - [x] add more Codesandbox examples  
 - [x] capture a GIF demo  
 - [x] remove date-fns  
