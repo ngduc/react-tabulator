@@ -1,5 +1,5 @@
-## [0.13.0] - 2020-06-24
-- upgraded tabulator to 4.7.0
+## [0.13.1] - 2020-06-27
+- upgraded tabulator to 4.7.1
 - feat: CI: moved from Travis to Github Action.
 
 ## [0.12.7] - 2020-04-29

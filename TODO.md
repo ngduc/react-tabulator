@@ -12,6 +12,7 @@ React Tabulator
 ### In Progress
 
 - [ ] upgrade dependencies  
+- [ ] fix: MultiSelectEditor is broken  
 
 ### Done ✓
 
