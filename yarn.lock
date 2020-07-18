@@ -8500,10 +8500,10 @@ symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
-tabulator-tables@^4.7.1:
-  version "4.7.1"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.7.1.tgz#daf55b14f915d763a4bcfa63abd3026c889a109c"
-  integrity sha512-YsQkWmwJw2msNKmBQ9OWsYDU6S2jOK6menbpP6d+NExe4S/D22Itp8ikCCLs7Vuwh8cpo5W+VqbTWbo+L4lITA==
+tabulator-tables@^4.7.2:
+  version "4.7.2"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.7.2.tgz#9897b123a9486692ed899c575ac04b672e16b831"
+  integrity sha512-UbG3/ylOfTmyJHk6EGpuO6hrTlfsKAmiNRz1hYZwhBzL2y9O3QnykVGhMTBSdaz4Cm38Ed4+Ez848dagzSg1qA==
 
 tapable@^1.0.0:
   version "1.1.0"

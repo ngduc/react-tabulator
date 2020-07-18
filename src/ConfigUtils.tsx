@@ -105,7 +105,6 @@ export interface IProps {
   clipboardCopied?: any;
   clipboardPasted?: any;
   clipboardPasteError?: any;
-  downloadDataFormatter?: any;
   downloadReady?: any;
   downloadComplete?: any;
 
@@ -147,7 +146,7 @@ export const propsToOptions = async (props: any) => {
     'groupVisibilityChanged','groupClick','groupDblClick','groupContext','groupTap','groupDblTap','groupTapHold',
     'movableRowsSendingStart','movableRowsSent','movableRowsSentFailed','movableRowsSendingStop','movableRowsReceivingStart','movableRowsReceived','movableRowsReceivedFailed','movableRowsReceivingStop',
     'validationFailed','clipboardCopied','clipboardPasted','clipboardPasteError',
-    'downloadDataFormatter','downloadReady','downloadComplete'];
+    'downloadReady','downloadComplete'];
   
   for (const callbackName of callbackNames) {
     output[callbackName] = props[callbackName] || NOOPS

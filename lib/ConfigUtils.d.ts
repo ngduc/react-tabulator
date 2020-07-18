@@ -98,7 +98,6 @@ export interface IProps {
     clipboardCopied?: any;
     clipboardPasted?: any;
     clipboardPasteError?: any;
-    downloadDataFormatter?: any;
     downloadReady?: any;
     downloadComplete?: any;
     options?: any;

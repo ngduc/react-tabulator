@@ -1,3 +1,7 @@
+## [0.13.2] - 2020-07-18
+- upgraded tabulator to 4.7.2
+- removed downloadDataFormatter (deprecated)
+
 ## [0.13.1] - 2020-06-27
 - upgraded tabulator to 4.7.1
 - feat: CI: moved from Travis to Github Action.
