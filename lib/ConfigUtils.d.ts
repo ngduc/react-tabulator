@@ -101,5 +101,6 @@ export interface IProps {
     downloadReady?: any;
     downloadComplete?: any;
     options?: any;
+    selectableCheck?: any;
 }
 export declare const propsToOptions: (props: any) => Promise<any>;
