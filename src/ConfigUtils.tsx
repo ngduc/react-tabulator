@@ -107,7 +107,8 @@ export interface IProps {
   clipboardPasteError?: any;
   downloadReady?: any;
   downloadComplete?: any;
-
+  selectableCheck?: any;
+  
   // NOTE: you can directly pass *any* tabulator options via this. (see README)
   options?: any; // Tabulator options object
 }
@@ -146,7 +147,7 @@ export const propsToOptions = async (props: any) => {
     'groupVisibilityChanged','groupClick','groupDblClick','groupContext','groupTap','groupDblTap','groupTapHold',
     'movableRowsSendingStart','movableRowsSent','movableRowsSentFailed','movableRowsSendingStop','movableRowsReceivingStart','movableRowsReceived','movableRowsReceivedFailed','movableRowsReceivingStop',
     'validationFailed','clipboardCopied','clipboardPasted','clipboardPasteError',
-    'downloadReady','downloadComplete'];
+    'downloadReady','downloadComplete', 'selectableCheck'];
   
   for (const callbackName of callbackNames) {
     output[callbackName] = props[callbackName] || NOOPS

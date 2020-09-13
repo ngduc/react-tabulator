@@ -100,7 +100,7 @@ export interface IProps {
     clipboardPasteError?: any;
     downloadReady?: any;
     downloadComplete?: any;
-    options?: any;
     selectableCheck?: any;
+    options?: any;
 }
 export declare const propsToOptions: (props: any) => Promise<any>;

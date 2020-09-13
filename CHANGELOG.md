@@ -1,3 +1,7 @@
+## [0.13.5] - 2020-09-13
+- added cross-env for Windows dev env.
+- fixed undefined this.table in componentDidMount.
+
 ## [0.13.2] - 2020-07-18
 - upgraded tabulator to 4.7.2
 - removed downloadDataFormatter (deprecated)

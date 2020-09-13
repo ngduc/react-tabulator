@@ -90,11 +90,11 @@ export default class extends React.Component<IProps, Partial<IState>> {
     // props data changed! (see: getDerivedStateFromProps)
     if (!isSameArray(prevState.data, this.state.data)) {
       // only when data is really different: call this.table.setData (will re-render table)
-      this.table.setData(this.state.data);
+      this.table && this.table.setData(this.state.data);
     }
     if (!isSameArray(prevState.columns, this.state.columns)) {
       // only when data is really different: call this.table.setData (will re-render table)
-      this.table.setColumns(this.state.columns);
+      this.table && this.table.setColumns(this.state.columns);
     }
   }
 
