@@ -4,7 +4,6 @@
   "description": "React Tabulator is based on tabulator - a JS table library with many advanced features.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "module": "es/index.js",
   "files": [
     "css",
     "es",
