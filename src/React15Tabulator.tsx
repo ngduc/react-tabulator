@@ -52,7 +52,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
   }
 
   componentWillUnmount() {
-    this.table.destroy();
+    this.table && this.table.destroy();
   }
 
   // this is for React 15.x only
@@ -60,13 +60,13 @@ export default class extends React.Component<IProps, Partial<IState>> {
     if (!isSameArray(this.state.data, props.data)) {
       // console.log('- data changed');
       this.setState({ data: props.data }, () => {
-        this.table.setData(this.state.data);
+        this.table && this.table.setData(this.state.data);
       });
     }
     if (!isSameArray(this.state.columns, props.columns)) {
       // console.log('- columns changed');
       this.setState({ columns: props.columns }, () => {
-        this.table.setColumns(this.state.columns);
+        this.table && this.table.setColumns(this.state.columns);
       });
     }
   }

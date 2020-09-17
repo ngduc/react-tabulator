@@ -52,7 +52,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
   }
 
   componentWillUnmount() {
-    this.table.destroy();
+    this.table && this.table.destroy();
   }
 
   // React 16.5.x - "getDerivedStateFromProps" replaces both "componentWillMount" & "componentWillReceiveProps"
