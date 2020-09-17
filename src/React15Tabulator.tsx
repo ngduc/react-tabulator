@@ -5,7 +5,7 @@ import { IProps, propsToOptions } from './ConfigUtils';
 import { isSameArray } from './Utils';
 
 /* tslint:disable-next-line */
-const Tabulator = require('tabulator-tables');
+import Tabulator from 'tabulator-tables';
 
 interface IState {
   data: any[];

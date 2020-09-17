@@ -1,6 +1,7 @@
-## [0.13.5] - 2020-09-13
+## [0.13.7] - 2020-09-16
 - added cross-env for Windows dev env.
 - fixed undefined this.table in componentDidMount.
+- upgraded tabulator to 4.8.1
 
 ## [0.13.2] - 2020-07-18
 - upgraded tabulator to 4.7.2
