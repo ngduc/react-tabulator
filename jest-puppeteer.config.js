@@ -13,7 +13,8 @@ try {
 const server = !isServerUp
   ? {
       command: 'npm run start-test-ui',
-      port: 3003
+      port: 3003,
+      launchTimeout: 9000,
     }
   : { command: '' };
 
