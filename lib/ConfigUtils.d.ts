@@ -65,7 +65,7 @@ export interface IProps {
     htmlImported?: any;
     dataLoading?: any;
     dataLoaded?: any;
-    dataEdited?: any;
+    dataChanged?: any;
     ajaxRequesting?: any;
     ajaxResponse?: any;
     ajaxError?: any;

@@ -72,7 +72,7 @@ export interface IProps {
   htmlImported?: any;
   dataLoading?: any;
   dataLoaded?: any;
-  dataEdited?: any;
+  dataChanged?: any;
   ajaxRequesting?: any;
   ajaxResponse?: any;
   ajaxError?: any;
@@ -141,7 +141,7 @@ export const propsToOptions = async (props: any) => {
     'rowAdded','rowDeleted','rowMoved','rowUpdated','rowSelectionChanged','rowSelected','rowDeselected','rowResized',
     'cellClick','cellDblClick','cellContext','cellTap','cellDblTap','cellTapHold','cellEditing','cellEdited','cellEditCancelled',
     'columnMoved','columnResized','columnTitleChanged','columnVisibilityChanged',
-    'htmlImporting','htmlImported','dataLoading','dataLoaded','dataEdited',
+    'htmlImporting','htmlImported','dataLoading','dataLoaded','dataChanged',
     'ajaxRequesting','ajaxResponse','ajaxError','dataFiltering','dataFiltered','dataSorting','dataSorted',
     'renderStarted','renderComplete','pageLoaded','localized','dataGrouping','dataGrouped',
     'groupVisibilityChanged','groupClick','groupDblClick','groupContext','groupTap','groupDblTap','groupTapHold',

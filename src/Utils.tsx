@@ -6,8 +6,8 @@ export function clone(obj: any) {
 }
 
 export function isSameArray(a: any[], b: any[]) {
-  let i = a.length;
-  if (i !== b.length) {
+  let i = a ? a.length : 0;
+  if (i !== (b ? b.length : 0)) {
     return false;
   }
   while (i--) {

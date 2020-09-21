@@ -68,7 +68,7 @@ class Editor extends React.Component<IProps> {
     }
   };
 
-  // order: handleBlur => sucess() => grid's cellEdited => grid's dataEdited => handleAddition
+  // order: handleBlur => sucess() => grid's cellEdited => grid's dataChanged => handleAddition
   handleBlur = () => {
     const { cancel } = this.props;
     const newValue = this.ref.input.input.value;

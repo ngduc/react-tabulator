@@ -15,7 +15,7 @@ const server = !isServerUp
       command: 'npm run start-test-ui',
       port: 3003
     }
-  : {};
+  : { command: '' };
 
 module.exports = {
   server,

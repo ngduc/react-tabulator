@@ -161,7 +161,7 @@ export default class extends React.Component<IProps> {
           columns={editableColumns}
           data={data}
           cellEdited={(cell: any) => console.log('cellEdited', cell)}
-          dataEdited={(newData: any) => console.log('dataEdited', newData)}
+          dataChanged={(newData: any) => console.log('dataChanged', newData)}
           footerElement={<span>Footer</span>}
           options={{ movableColumns: true, movableRows: true }}
         />
