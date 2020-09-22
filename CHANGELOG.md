@@ -1,7 +1,8 @@
-## [0.14.0] - 2020-09-20
+## [0.14.1] - 2020-09-21
 - added cross-env for Windows dev env.
 - fixed undefined this.table in componentDidMount.
 - upgraded tabulator to 4.8.1
+- fixed: broken rowSelectionChanged
 
 ## [0.13.2] - 2020-07-18
 - upgraded tabulator to 4.7.2

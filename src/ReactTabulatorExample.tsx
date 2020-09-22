@@ -148,7 +148,9 @@ export default class extends React.Component<IProps> {
           data-custom-attr="test-custom-attribute"
           className="custom-css-class"
         />
-        <div>Selected Name: {this.state.selectedName}</div>
+        <i>
+          Selected Name: <strong>{this.state.selectedName}</strong>
+        </i>
 
         <h3>
           Asynchronous data: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>{' '}
