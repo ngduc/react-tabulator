@@ -147,7 +147,7 @@ export const propsToOptions = async (props: any) => {
     'groupVisibilityChanged','groupClick','groupDblClick','groupContext','groupTap','groupDblTap','groupTapHold',
     'movableRowsSendingStart','movableRowsSent','movableRowsSentFailed','movableRowsSendingStop','movableRowsReceivingStart','movableRowsReceived','movableRowsReceivedFailed','movableRowsReceivingStop',
     'validationFailed','clipboardCopied','clipboardPasted','clipboardPasteError',
-    'downloadReady','downloadComplete', 'selectableCheck'];
+    'downloadReady','downloadComplete']; // don't add "selectableCheck" here, it will break "rowSelectionChanged"
   
   for (const callbackName of callbackNames) {
     output[callbackName] = props[callbackName] || NOOPS
