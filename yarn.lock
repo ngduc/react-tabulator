@@ -8529,10 +8529,10 @@ symbol-tree@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
 
-tabulator-tables@4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.8.2.tgz#c1246652955ba1e98336e35d83343f7102aa6443"
-  integrity sha512-yTK2gl2dUlJhuIMzBP1tAjF5nmc9KMWSDw6wmMmMHT/ucoHWmIuRYXqqm6wAAq0bC0B1/QDyITEJv4tJ673pMg==
+tabulator-tables@4.9.3:
+  version "4.9.3"
+  resolved "https://registry.yarnpkg.com/tabulator-tables/-/tabulator-tables-4.9.3.tgz#89ea8f9bffc11ba9a789369b5165ac82da26f4f0"
+  integrity sha512-iwwQqAEGGxlgrBpcmJJvMJrfjGLcCXOB3AOb/DGkXqBy1YKoYA36hIl7qXGp6Jo8dSkzFAlDT6pKLZgyhs9OnQ==
 
 tapable@^1.0.0:
   version "1.1.0"
