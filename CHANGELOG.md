@@ -1,4 +1,5 @@
-## [0.14.4] - 2021-01-15
+## [0.15.0] - 2021-01-15
+- dev: switched from yarn to npm; ran: npm audit fix;
 - dev: upgraded dependencies.
 - upgraded tabulator-tables to 4.9.3
 

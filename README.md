@@ -49,6 +49,8 @@ import { ReactTabulator } from 'react-tabulator'; // for React 15.x, use import 
 Require: `NodeJS v8.12.0 +` and `yarn` (optional)
 
 ```
+$ npm install --legacy-peer-deps
+
 $ npm run dev      Launch DEV mode (with hot reload)
 $ npm run build    Make a build
 
