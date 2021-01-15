@@ -1,4 +1,4 @@
-/* Tabulator v4.8.2 (c) Oliver Folkerd */
+/* Tabulator v4.9.3 (c) Oliver Folkerd */
 .tabulator {
   position: relative;
   background-color: #fff;
@@ -96,6 +96,10 @@
   border: 1px solid #999;
   padding: 1px;
   background: #fff;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title .tabulator-header-menu-button + .tabulator-title-editor {
+  width: calc(100% - 22px);
 }
 
 .tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-sorter {
@@ -234,8 +238,13 @@
   padding-bottom: 20px;
 }
 
-.tabulator .tabulator-header .tabulator-col.tabulator-col-vertical.tabulator-sortable .tabulator-arrow {
-  right: calc(50% - 6px);
+.tabulator .tabulator-header .tabulator-col.tabulator-col-vertical.tabulator-sortable .tabulator-col-sorter {
+  -ms-flex-pack: center;
+      justify-content: center;
+  left: 0;
+  right: 0;
+  top: 4px;
+  bottom: auto;
 }
 
 .tabulator .tabulator-header .tabulator-frozen {
@@ -525,6 +534,21 @@
 
 .tabulator.table-dark .tabulator-row.tabulator-selected {
   background-color: #9ABCEA;
+}
+
+.tabulator.table-dark .tabulator-footer {
+  border-color: #32383e !important;
+}
+
+.tabulator.table-dark .tabulator-footer .tabulator-calcs-holder {
+  border-color: #32383e !important;
+  background: #212529 !important;
+}
+
+.tabulator.table-dark .tabulator-footer .tabulator-calcs-holder .tabulator-row {
+  border-color: #32383e !important;
+  background-color: #212529 !important;
+  color: #fff !important;
 }
 
 .tabulator.table-striped:not(.table-dark) .tabulator-row:nth-child(even) {
@@ -827,6 +851,7 @@
 
 .tabulator-row .tabulator-cell.tabulator-editing {
   border: 1px solid #1D68CD;
+  outline: none;
   padding: 0;
 }
 
@@ -1064,6 +1089,8 @@
 }
 
 .tabulator-menu .tabulator-menu-item {
+  position: relative;
+  box-sizing: border-box;
   padding: 5px 10px;
   -webkit-user-select: none;
       -ms-user-select: none;
@@ -1077,6 +1104,26 @@
 .tabulator-menu .tabulator-menu-item:not(.tabulator-menu-item-disabled):hover {
   cursor: pointer;
   background: #f9f9f9;
+}
+
+.tabulator-menu .tabulator-menu-item.tabulator-menu-item-submenu {
+  padding-right: 25px;
+}
+
+.tabulator-menu .tabulator-menu-item.tabulator-menu-item-submenu::after {
+  display: inline-block;
+  position: absolute;
+  top: calc(5px + .4em);
+  right: 10px;
+  height: 7px;
+  width: 7px;
+  content: '';
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+  border-color: #dee2e6;
+  vertical-align: top;
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
 }
 
 .tabulator-menu .tabulator-menu-separator {
