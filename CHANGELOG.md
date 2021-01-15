@@ -1,4 +1,5 @@
-## [0.14.3] - 2021-01-09
+## [0.14.4] - 2021-01-15
+- dev: upgraded dependencies.
 - upgraded tabulator-tables to 4.9.3
 
 ## [0.14.2] - 2020-10-07
