@@ -4,7 +4,7 @@ React Tabulator is based on Tabulator - a JS table library with many advanced fe
 
 - Example - Live Demo: [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 - Example - Source code: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
-- More Examples: [More Codesandbox Examples](/docs/examples.md)
+- More Examples, use cases: [More Codesandbox Examples](/docs/examples.md)
 
 [<img src="docs/react-tabulator-demo.gif" />](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 
