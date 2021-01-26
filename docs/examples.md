@@ -23,10 +23,14 @@ Support React v15.x (legacy, stopped support from 2021-01)
 *If you are using ReactTabulator in your project, please feel free to open a PR or contact me to add it here:*
 
 https://github.com/preftech/dash-tabulator
-- <img src="https://raw.githubusercontent.com/preftech/dash-tabulator/master/docs/dash_tabulator.gif">
+<img src="https://raw.githubusercontent.com/preftech/dash-tabulator/master/docs/dash_tabulator.gif">
+
+<hr />
 
 https://github.com/chatatechnologies/react-autoql
-- <img src="https://github.com/chatatechnologies/react-autoql/raw/master/public/dashboard.png">
+<img src="https://github.com/chatatechnologies/react-autoql/raw/master/public/dashboard.png">
+
+<hr />
 
 ## Other Projects
 
