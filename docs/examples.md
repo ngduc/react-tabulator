@@ -5,6 +5,9 @@ React-tabulator version may not be the latest in these examples.
 - Example - Live Demo: [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 - Example - Source code: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
 
+Themes:
+- Try out different Themes: [Link](https://codesandbox.io/s/react-tabulator-themes-w5zhq?file=/src/components/Home.js)
+
 Columns:
 - Dynamically set columns - [Link](https://codesandbox.io/s/react-tabulator-examples-6ldg3?file=/src/components/Home.js)
 
