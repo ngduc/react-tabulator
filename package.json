@@ -49,8 +49,8 @@
     "tabulator-tables": "4.9.3"
   },
   "peerDependencies": {
-    "react": ">=15.6.2 || ^16.0.0",
-    "react-dom": ">=15.6.2 || ^16.0.0"
+    "react": ">=15.6.2 || ^16.0.0 || ^17.0.0",
+    "react-dom": ">=15.6.2 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
     "@types/es6-promise": "^3.3.0",
