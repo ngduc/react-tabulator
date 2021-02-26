@@ -24,8 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn test
+    - run: npm install --legacy-peer-deps
+    - run: npm run test
       env:
         NODE_ENV: test
         PORT: 3003

@@ -31,7 +31,7 @@ Tabulator's features:
 ### 📦 Usage
 
 ```
-$ npm install react-tabulator
+$ npm install react-tabulator --save
 
 import 'react-tabulator/lib/styles.css'; // required styles
 import 'react-tabulator/lib/css/tabulator.min.css'; // theme
