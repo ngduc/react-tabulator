@@ -43,15 +43,16 @@ import { ReactTabulator } from 'react-tabulator';
 * use "ref.table" to access to all tabulator functions.
 ```
 
-### 🔧 Commands
+### 🔧 Development - Commands
 
 Require: `NodeJS` and `yarn` (optional)
 
 ```
-$ npm run dev      Launch DEV mode (with hot reload)
-$ npm run build    Make a build
+$ npm install --legacy-peer-deps        install dependencies for development.
+$ npm run dev      Launch DEV mode (with hot reload).
+$ npm run build    Make a build.
 
-$ npm run test     Run tests using jest-puppeteer (with headless Chrome)
+$ npm run test     Run tests using jest-puppeteer (with headless Chrome).
 ```
 
 - Development Doc - see [docs/development.md](docs/development.md)

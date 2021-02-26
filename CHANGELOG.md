@@ -1,5 +1,6 @@
-## [0.14.5] - 2021-02-25
+## [0.14.6] - 2021-02-25
 - updated peerDependencies for React 17 - thanks @ApacheEx
+- use npm instead of yarn.
 
 ## [0.14.4] - 2021-01-15
 - dev: upgraded dependencies.
