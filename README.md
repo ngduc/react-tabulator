@@ -45,14 +45,14 @@ import { ReactTabulator } from 'react-tabulator';
 
 ### 🔧 Development - Commands
 
-Require: `NodeJS` and `yarn` (optional)
+Require: `NodeJS` and `yarn`
 
 ```
-$ npm install --legacy-peer-deps        install dependencies for development.
-$ npm run dev      Launch DEV mode (with hot reload).
-$ npm run build    Make a build.
+$ yarn        install dependencies for development.
+$ yarn dev      Launch DEV mode (with hot reload).
+$ yarn build    Make a build.
 
-$ npm run test     Run tests using jest-puppeteer (with headless Chrome).
+$ yarn test     Run tests using jest-puppeteer (with headless Chrome).
 ```
 
 - Development Doc - see [docs/development.md](docs/development.md)
