@@ -3,13 +3,15 @@ import { IProps } from './ConfigUtils';
 interface IState {
     data: any[];
     columns: any[];
+    options?: any;
 }
 export default class extends React.Component<IProps, Partial<IState>> {
     state: IState;
-    ref: any;
+    ref: React.ReactInstance;
     htmlProps: any;
     mainId: string;
     table: any;
+    initTabulator(): Promise<void>;
     componentDidMount(): Promise<void>;
     componentWillUnmount(): void;
     static getDerivedStateFromProps(props: any, state: any): any;
