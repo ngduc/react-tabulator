@@ -4,19 +4,19 @@ NodeJS 8.15+
 
 Tested with the following development environments:
 - MacOS.
-- Windows 10, Cygwin.
+- Windows 10, Cygwin, Node 15.5.
 
 ### Upgrade Tabulator
 
 To upgrade tabulator:
-- package.json: increase tabulator version
-- run ```$ yarn``` to update
-- run ```$ yarn test``` make sure all tests pass
+- package.json: increase tabulator version.
+- run ```$ npm install --legacy-peer-deps``` to update.
+- run ```$ npm run test``` make sure all tests pass.
 - copy all css files from ```node_modules/tabulator-tables/dist/css/``` to ```src/css/```
-- run ```$ yarn build```
-- update CHANGELOG
+- run ```$ npm run build```
+- update CHANGELOG.
 - commit & push & npm publish
-- github: create a release (tag)
+- github: create a release (tag).
 
 ### Unit tests
 

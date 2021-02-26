@@ -1,5 +1,6 @@
 ## [0.14.7] - 2021-02-25
 - feat: when "options" prop changed, rebuild the table.
+- switched from yarn to npm as yarn build doesn't work anymore.
 - updated peerDependencies for React 17 - thanks @ApacheEx
 
 ## [0.14.4] - 2021-01-15
