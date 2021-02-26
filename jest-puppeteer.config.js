@@ -7,7 +7,9 @@ try {
     execSync('curl http://localhost:3003')
       .toString()
       .indexOf('Failed to connect') < 0;
-} catch (e) {}
+} catch (e) {
+  console.log('ERROR: ', e)
+}
 
 // if UI is not up => start UI
 const server = !isServerUp
@@ -16,7 +18,7 @@ const server = !isServerUp
       port: 3003,
       launchTimeout: 9000,
     }
-  : { command: '' };
+  : { command: 'echo -' };
 
 module.exports = {
   server,

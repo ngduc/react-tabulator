@@ -1,3 +1,6 @@
+## [0.14.5] - 2021-02-25
+- updated peerDependencies for React 17 - thanks @ApacheEx
+
 ## [0.14.4] - 2021-01-15
 - dev: upgraded dependencies.
 - upgraded tabulator-tables to 4.9.3

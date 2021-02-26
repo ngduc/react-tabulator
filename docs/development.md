@@ -13,3 +13,7 @@ To upgrade tabulator:
 - update CHANGELOG
 - commit & push & npm publish
 - github: create a release (tag)
+
+### Unit tests
+
+Sometimes when running unit tests, it fails to launch the puppeteer server (see: jest-puppeteer.config.js), you may want to kill all node processes and run the tests again.
