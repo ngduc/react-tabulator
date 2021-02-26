@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { pickHTMLProps } from 'pick-react-known-prop';
 import { IProps, propsToOptions } from './ConfigUtils';
-import { isSameArray } from './Utils';
+import { isSameArray, isSameObject } from './Utils';
 
 /* tslint:disable-next-line */
 import Tabulator from 'tabulator-tables';
@@ -10,20 +10,22 @@ import Tabulator from 'tabulator-tables';
 interface IState {
   data: any[];
   columns: any[];
+  options?: any;
 }
 
 export default class extends React.Component<IProps, Partial<IState>> {
   state: IState = {
     data: [],
-    columns: this.props.columns
+    columns: this.props.columns,
+    options: this.props.options
   };
 
-  ref: any = null;
+  ref: React.ReactInstance = null;
   htmlProps: any = null;
   mainId = `tabulator-${+new Date()}-${Math.floor(Math.random() * 9999999)}`; // random id
-  table: any = null; // will be set once Tabulator instantiated
+  table: any = null; // will be set once Tabulator instantiated.
 
-  async componentDidMount() {
+  async initTabulator() {
     const domEle: any = ReactDOM.findDOMNode(this.ref); // mounted DOM element
     const that = this;
     const { columns, data, options } = this.props;
@@ -34,7 +36,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
       ...propOptions,
       layout: 'fitColumns', // fit columns to width of table (optional)
       tableBuilding() {
-        that.table = this; // keep table instance
+        that.table = this; // keep the table instance.
         that.props.tableBuilding ? that.props.tableBuilding() : '';
       },
       dataLoaded() {
@@ -45,10 +47,13 @@ export default class extends React.Component<IProps, Partial<IState>> {
       data
     });
     // await table.setData(data);
-    // console.log('- componentDidMount');
     if (data && data.length > 0) {
       this.setState({ data });
     }
+  }
+
+  async componentDidMount() {
+    await this.initTabulator();
   }
 
   componentWillUnmount() {
@@ -57,7 +62,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
 
   // React 16.5.x - "getDerivedStateFromProps" replaces both "componentWillMount" & "componentWillReceiveProps"
   // This function will be ignored when running with React 15.6.x
-  static getDerivedStateFromProps(props: any, state: any): any {
+  static getDerivedStateFromProps(props: any, state: any) {
     // console.log('- getDerivedStateFromProps', props, state);
     const noData = !props.data || props.data.length === 0;
     if (!state && noData) {
@@ -75,11 +80,15 @@ export default class extends React.Component<IProps, Partial<IState>> {
     //     return { ...state, columns: [...props.columns] };
     //   }
     // }
-    if (state && (props.data || props.columns)) {
+    if (state && (props.data || props.columns | props.options)) {
       // this triggers componentDidUpdate
-      if (!isSameArray(state.data, props.data) || !isSameArray(state.columns, props.columns)) {
+      if (
+        !isSameArray(state.data, props.data) ||
+        !isSameArray(state.columns, props.columns) ||
+        !isSameObject(state.options, props.options)
+      ) {
         // console.log('data changed!');
-        return { ...state, data: [...props.data], columns: [...props.columns] };
+        return { ...state, data: [...props.data], columns: [...props.columns], options: { ...props.options } };
       }
     }
     return {};
@@ -96,6 +105,10 @@ export default class extends React.Component<IProps, Partial<IState>> {
       // only when data is really different: call this.table.setData (will re-render table)
       this.table && this.table.setColumns(this.state.columns);
     }
+    if (!isSameObject(prevState.options, this.state.options)) {
+      // console.log('options changed', this.state.options);
+      this.initTabulator();
+    }
   }
 
   pickValidHTMLProps = () => {
@@ -110,6 +123,8 @@ export default class extends React.Component<IProps, Partial<IState>> {
   render() {
     this.pickValidHTMLProps();
     const { className } = this.props;
-    return <div ref={ref => (this.ref = ref)} data-instance={this.mainId} {...this.htmlProps} className={className} />;
+    return (
+      <div ref={(ref) => (this.ref = ref)} data-instance={this.mainId} {...this.htmlProps} className={className} />
+    );
   }
 }

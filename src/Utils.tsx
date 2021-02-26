@@ -6,8 +6,8 @@ export function clone(obj: any) {
 }
 
 export function isSameArray(a: any[], b: any[]) {
-  let i = a ? a.length : 0;
-  if (i !== (b ? b.length : 0)) {
+  let i = a && a.length ? a.length : 0;
+  if (i !== (b && b.length ? b.length : 0)) {
     return false;
   }
   while (i--) {
@@ -16,6 +16,10 @@ export function isSameArray(a: any[], b: any[]) {
     }
   }
   return true;
+}
+
+export function isSameObject(a: any, b: any) {
+  return JSON.stringify(a) === JSON.stringify(b);
 }
 
 export function reactFormatter(JSX: any) {

@@ -114,7 +114,7 @@ export default class extends React.Component<IProps> {
       },
       current_page: 1,
       paginationSize: 3,
-      ajaxResponse: function(url, params, response) {
+      ajaxResponse: function(url: string, params, response) {
         console.log('ajaxResponse', url);
         return response; //return the response data to tabulator
       },
