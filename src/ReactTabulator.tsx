@@ -34,7 +34,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
     new Tabulator(domEle, {
       columns,
       ...propOptions,
-      layout: 'fitColumns', // fit columns to width of table (optional)
+      layout: this.props.layout ?? 'fitColumns', // fit columns to width of table (optional)
       tableBuilding() {
         that.table = this; // keep the table instance.
         that.props.tableBuilding ? that.props.tableBuilding() : '';

@@ -1,4 +1,24 @@
-# Examples
+# FAQ
+
+How to force render a table?
+- ReactTabulator automatically rerenders when data, columns or options changed.
+- In case you want to force render it, you can set the component "key" to something else like:
+
+```
+const [tableKey, setTableKey] = React.useState(`${Math.random()}`)
+
+on change: setTableKey(`${Math.random()}`)
+
+<ReactTabulator key={tableKey} ref={tableRef} columns={columns} data={data}
+```
+
+How to set Tabulator's options?
+- ReactTabulator "options" prop will be passed directly to Tabulator's options when initializing the table.
+
+How to call Tabulator's functions?
+- Use "ref.table" to access to all tabulator functions. [Example](https://github.com/ngduc/react-tabulator/blob/master/src/ReactTabulatorExample.tsx#L83).
+
+# Live Examples
 
 React-tabulator version may not be the latest in these examples.
 
