@@ -18,32 +18,47 @@ export function isSameArray(a: any[], b: any[]) {
   return true;
 }
 
+// source: https://stackoverflow.com/questions/4816099/chrome-sendrequest-error-typeerror-converting-circular-structure-to-json
+function stringifyCensor(censor: any) {
+  let i = 0;
+  return function (key: string, value: any) {
+    if (i !== 0 && typeof censor === 'object' && typeof value == 'object' && censor == value) {
+      return '[Circular]';
+    }
+    if (i >= 29) {
+      // seems to be a harded maximum of 30 serialized objects?
+      return '[Unknown]';
+    }
+    ++i; // so we know we aren't using the original object anymore
+    return value;
+  };
+}
+
 export function isSameObject(a: any, b: any) {
-  return JSON.stringify(a) === JSON.stringify(b);
+  return JSON.stringify(a, stringifyCensor(a)) === JSON.stringify(b, stringifyCensor(b));
 }
 
 export function reactFormatter(JSX: any) {
-  return function customFormatter(cell: any, formatterParams: any, onRendered: (callback: () => void) => void){
-    //cell - the cell component
-    //formatterParams - parameters set for the column
-    //onRendered - function to call when the formatter has been rendered
-
+  return function customFormatter(cell: any, formatterParams: any, onRendered: (callback: () => void) => void) {
+    // cell - the cell component
+    // formatterParams - parameters set for the column
+    // onRendered - function to call when the formatter has been rendered
     const renderFn = () => {
       const cellEl = cell.getElement();
       if (cellEl) {
-        const formatterCell = cellEl.querySelector('.formatterCell')
+        const formatterCell = cellEl.querySelector('.formatterCell');
         if (formatterCell) {
           const CompWithMoreProps = React.cloneElement(JSX, { cell });
           render(CompWithMoreProps, cellEl.querySelector('.formatterCell'));
         }
       }
-    }
+    };
 
     onRendered(renderFn); // initial render only.
 
     setTimeout(() => {
       renderFn(); // render every time cell value changed.
-    }, 0)
+    }, 0);
     return '<div class="formatterCell"></div>';
-  }
+  };
 }

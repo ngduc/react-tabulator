@@ -1,5 +1,6 @@
-## [0.14.8] - 2021-02-25
+## [0.15.0] - 2021-02-25
 - feat: when "options" prop changed, rebuild and rerender the table.
+- fix: Util: stringifyCensor to compare "options" props.
 - fix: take "layout" from prop - thanks @ViralLka
 - switched from yarn to npm as yarn build doesn't work anymore.
 - updated peerDependencies for React 17 - thanks @ApacheEx
