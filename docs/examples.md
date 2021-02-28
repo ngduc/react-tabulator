@@ -1,6 +1,6 @@
 # FAQ
 
-How to force render a table?
+**How to force render a table?**
 - ReactTabulator automatically rerenders when data, columns or options changed.
 - In case you want to force render it, you can set the component "key" to something else like:
 
@@ -12,15 +12,15 @@ on change: setTableKey(`${Math.random()}`)
 <ReactTabulator key={tableKey} ref={tableRef} columns={columns} data={data}
 ```
 
-How to set Tabulator's options?
+**How to set Tabulator's options?**
 - ReactTabulator "options" prop will be passed directly to Tabulator's options when initializing the table.
 
-How to call Tabulator's functions?
+**How to call Tabulator's functions?**
 - Use "ref.table" to access to all tabulator functions. [Example](https://github.com/ngduc/react-tabulator/blob/master/src/ReactTabulatorExample.tsx#L83).
 
 # Live Examples
 
-React-tabulator version may not be the latest in these examples.
+*React-tabulator version may not be the latest in these examples.*
 
 - Example - Live Demo: [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 - Example - Source code: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
@@ -30,6 +30,9 @@ Themes:
 
 Columns:
 - Dynamically set columns - [Link](https://codesandbox.io/s/react-tabulator-examples-6ldg3?file=/src/components/Home.js)
+
+Rows:
+- Row selection - [Link](https://codesandbox.io/s/react-tabulator-row-selection-v9d4x?file=/src/components/Home.js)
 
 Data:
 - Dropdown to filter table data - [Link](https://codesandbox.io/s/react-tabulator-examples-vs7vq?file=/src/components/Home.js)
@@ -62,6 +65,11 @@ https://github.com/chatatechnologies/react-autoql
 
 https://github.com/dotadraft/dotadraft_ui
 <img src="https://raw.githubusercontent.com/dotadraft/dotadraft_ui/master/images/screenshot.png">
+
+<hr />
+
+Stock Portfolio
+<img src="https://i.ibb.co/zJCCVG7/image.png">
 
 <hr />
 
