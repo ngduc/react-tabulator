@@ -54,7 +54,7 @@ https://github.com/moshtaghi/nydax
 <hr />
 
 https://github.com/preftech/dash-tabulator
-<img src="https://raw.githubusercontent.com/preftech/dash-tabulator/master/docs/dash_tabulator.gif">
+<img src="https://aws1.discourse-cdn.com/business7/uploads/plot/original/2X/8/8cbc9b8a2038d66272b5af189b7506738d11e7b5.gif">
 
 <hr />
 
@@ -69,6 +69,7 @@ https://github.com/dotadraft/dotadraft_ui
 <hr />
 
 Stock Portfolio
+
 <img src="https://i.ibb.co/zJCCVG7/image.png">
 
 <hr />
