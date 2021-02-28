@@ -37,6 +37,8 @@ Rows:
 Data:
 - Dropdown to filter table data - [Link](https://codesandbox.io/s/react-tabulator-examples-vs7vq?file=/src/components/Home.js)
 - Performance - render a lot of data with faker - [Link](https://codesandbox.io/s/react-tabulator-performance-demo-forked-3rqp2)
+- Button to Add, Remove rows, get data; useState - [Link](https://codesandbox.io/s/react-tabulator-add-get-data-lyr8n?file=/src/App.js)
+- Button to Add, Async Add, Remove rows with Redux Store - [Link](https://codesandbox.io/s/elastic-rgb-qgict?file=/src/App.js)
 
 Edit:
 - Edit & get edited data - [Link](https://codesandbox.io/s/react-tabulator-examples-forked-ym0fs?file=/src/components/Home.js)
