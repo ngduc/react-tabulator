@@ -5,7 +5,7 @@ import { IProps, propsToOptions } from './ConfigUtils';
 import { isSameArray, isSameObject } from './Utils';
 
 /* tslint:disable-next-line */
-import Tabulator from 'tabulator-tables';
+import { TabulatorFull as Tabulator } from 'tabulator-tables';
 
 interface IState {
   data: any[];
@@ -31,21 +31,29 @@ export default class extends React.Component<IProps, Partial<IState>> {
     const { columns, data, options } = this.props;
     const propOptions = await propsToOptions(this.props);
 
-    new Tabulator(domEle, {
+    const instance = new Tabulator(domEle, {
       columns,
       ...propOptions,
       layout: this.props.layout ?? 'fitColumns', // fit columns to width of table (optional)
-      tableBuilding() {
-        that.table = this; // keep the table instance.
-        that.props.tableBuilding ? that.props.tableBuilding() : '';
-      },
-      dataLoaded() {
-        that.props.dataLoaded ? that.props.dataLoaded() : '';
-      },
+      // tableBuilding() {
+      //   that.table = this; // keep the table instance.
+      //   that.props.tableBuilding ? that.props.tableBuilding() : '';
+      // },
+      // dataLoaded() {
+      //   that.props.dataLoaded ? that.props.dataLoaded() : '';
+      // },
       invalidOptionWarnings: false, // #102: disable console warnings for invalid table properties
       ...options, // props.options are passed to Tabulator's options.
       data
     });
+    instance.on('tableBuilding', function () {
+      that.table = this; // keep the table instance.
+      that.props.tableBuilding ? that.props.tableBuilding() : '';
+    });
+    instance.on('dataLoaded', function () {
+      that.props.dataLoaded ? that.props.dataLoaded() : '';
+    });
+
     // await table.setData(data);
     if (data && data.length > 0) {
       this.setState({ data });
@@ -96,6 +104,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
 
   // componentDidUpdate(prevProps, prevState)
   componentDidUpdate(prevProps: IProps, prevState: IState) {
+    // console.log('--- ', this.table)
     // props data changed! (see: getDerivedStateFromProps)
     if (!isSameArray(prevState.data, this.state.data)) {
       // only when data is really different: call this.table.setData (will re-render table)

@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import './styles.css';
 
 import '../../styles.css'; // required styles
-// import '../../css/tabulator.min.css';  // tabulator theme
-import '../../css/bootstrap/tabulator_bootstrap.min.css'; // bootstrap theme
+import '../../src/css/tabulator.min.css';  // tabulator theme
+// import '../../src/css/bootstrap/tabulator_bootstrap.min.css'; // bootstrap theme
 
 import { ReactTabulatorExample } from '../../lib';
 // import { ReactTabulator, ReactTabulatorExample } from '../../lib';
