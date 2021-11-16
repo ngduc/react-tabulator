@@ -1,3 +1,6 @@
+## [0.16.1] - 2021-11-15
+- upgraded tabulator-tables to 5.0.7
+
 ## [0.15.0] - 2021-02-25
 - feat: when "options" prop changed, rebuild and rerender the table.
 - fix: Util: stringifyCensor to compare "options" props.
