@@ -88,12 +88,12 @@ export default class extends React.Component<IProps, Partial<IState>> {
     //     return { ...state, columns: [...props.columns] };
     //   }
     // }
-    if (state && (props.data || props.columns | props.options)) {
+    if (state && (props.data || props.columns || props.options)) {
       // this triggers componentDidUpdate
       if (
         !isSameArray(state.data, props.data) ||
         !isSameArray(state.columns, props.columns) ||
-        !isSameObject(state.options, props.options)
+        (props.checkOptions === true && !isSameObject(state.options, props.options))
       ) {
         // console.log('data changed!');
         return { ...state, data: [...props.data], columns: [...props.columns], options: { ...props.options } };
