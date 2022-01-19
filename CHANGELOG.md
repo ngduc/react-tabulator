@@ -1,3 +1,7 @@
+## [0.16.5] - 2022-01-18
+- upgraded tabulator-tables to 5.0.10
+- use pnpm instead of npm
+
 ## [0.16.1] - 2021-11-15
 - upgraded tabulator-tables to 5.0.7
 
