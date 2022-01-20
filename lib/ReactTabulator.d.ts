@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { IProps } from './ConfigUtils';
+import { Tabulator as TabulatorTypes } from './types/TabulatorTypes';
+export interface ReactTabulatorOptions extends TabulatorTypes.Options {
+    [k: string]: any;
+}
 interface IState {
     data: any[];
     columns: any[];
-    options?: any;
+    options?: ReactTabulatorOptions;
 }
 export default class extends React.Component<IProps, Partial<IState>> {
     state: IState;

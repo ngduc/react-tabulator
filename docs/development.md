@@ -10,6 +10,7 @@ Tested with the following development environments:
 
 To upgrade tabulator:
 - package.json: increase tabulator version.
+- update TabulatorTypes.ts from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/tabulator-tables/index.d.ts
 - run ```$ npm install --legacy-peer-deps``` to update.
 - run ```$ npm run test``` make sure all tests pass.
 - copy all css files from ```node_modules/tabulator-tables/dist/css/``` to ```src/css/```

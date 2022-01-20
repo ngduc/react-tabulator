@@ -6,11 +6,16 @@ import { isSameArray, isSameObject } from './Utils';
 
 /* tslint:disable-next-line */
 import { TabulatorFull as Tabulator } from 'tabulator-tables';
+import { Tabulator as TabulatorTypes } from './types/TabulatorTypes'
+
+export interface ReactTabulatorOptions extends TabulatorTypes.Options {
+  [k: string]: any
+};
 
 interface IState {
   data: any[];
   columns: any[];
-  options?: any;
+  options?: ReactTabulatorOptions;
 }
 
 export default class extends React.Component<IProps, Partial<IState>> {

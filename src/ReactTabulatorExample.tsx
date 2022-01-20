@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ReactTabulator from './ReactTabulator';
+import ReactTabulator, { ReactTabulatorOptions } from './ReactTabulator';
 
 import DateEditor from './editors/DateEditor';
 import MultiSelectEditor from './editors/MultiSelectEditor';
@@ -133,9 +133,10 @@ export default class extends React.Component<IProps> {
   }
 
   render() {
-    const options = {
+    const options: ReactTabulatorOptions = {
       height: 150,
-      movableRows: true
+      movableRows: true,
+      movableColumns: true
     };
     return (
       <div>
