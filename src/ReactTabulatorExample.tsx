@@ -1,4 +1,8 @@
 import * as React from 'react';
+
+// for styles:
+// import 'react-tabulator/lib/styles.css'; // default theme
+// import 'react-tabulator/css/bootstrap/tabulator_bootstrap.min.css'; // use Theme(s)
 import ReactTabulator, { ReactTabulatorOptions } from './ReactTabulator';
 
 import DateEditor from './editors/DateEditor';
