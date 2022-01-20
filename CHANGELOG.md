@@ -1,8 +1,9 @@
-## [0.16.9] - 2022-01-18
-- upgraded tabulator-tables to 5.0.10
-- use pnpm instead of npm
-- feat: new prop "checkOptions": if set to true, it will rerender when options changed.
+## [0.17.0] - 2022-01-18
+- BREAKING: upgraded tabulator-tables to 5.0.10
+- BREAKING: added "events" prop, callback props (like: rowClick) are now deprecated.
+- feat: added "checkOptions" prop: if set to true, it will rerender when options changed.
 - feat: added typescript types: ReactTabulatorOptions
+- use pnpm instead of npm
 
 ## [0.16.1] - 2021-11-15
 - upgraded tabulator-tables to 5.0.7

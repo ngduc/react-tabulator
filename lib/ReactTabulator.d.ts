@@ -4,6 +4,8 @@ import { Tabulator as TabulatorTypes } from './types/TabulatorTypes';
 export interface ReactTabulatorOptions extends TabulatorTypes.Options {
     [k: string]: any;
 }
+export interface ColumnDefinition extends TabulatorTypes.ColumnDefinition {
+}
 interface IState {
     data: any[];
     columns: any[];

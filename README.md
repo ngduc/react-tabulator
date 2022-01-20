@@ -38,9 +38,10 @@ import 'react-tabulator/lib/styles.css'; // required styles
 import 'react-tabulator/lib/css/tabulator.min.css'; // theme
 import { ReactTabulator } from 'react-tabulator';
 
-    <ReactTabulator columns={columns} data={data} options={} />
+    <ReactTabulator columns={columns} data={data} options={} events={{ rowClick: rowClickHandler }} />
 
 * "options" will be passed directly to Tabulator's options.
+* "events" is an object like { eventName: handlerFunction }
 * use "ref.table" to access to all tabulator functions.
 ```
 - More Examples, Use cases, FAQ: [More Live Examples / Use cases](/docs/examples.md)

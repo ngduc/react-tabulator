@@ -1,4 +1,5 @@
 export interface IProps {
+    events?: any;
     className?: string;
     columns: any[];
     data: any[];

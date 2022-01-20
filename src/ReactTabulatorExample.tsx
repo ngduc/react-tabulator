@@ -3,7 +3,7 @@ import * as React from 'react';
 // for styles:
 // import 'react-tabulator/lib/styles.css'; // default theme
 // import 'react-tabulator/css/bootstrap/tabulator_bootstrap.min.css'; // use Theme(s)
-import ReactTabulator, { ReactTabulatorOptions } from './ReactTabulator';
+import ReactTabulator, { ReactTabulatorOptions, ColumnDefinition } from './ReactTabulator';
 
 import DateEditor from './editors/DateEditor';
 import MultiSelectEditor from './editors/MultiSelectEditor';
@@ -17,7 +17,7 @@ function SimpleButton (props: any) {
   return <button onClick={() => alert(rowData.name)}>{cellValue}</button>
 }
 
-const columns = [
+const columns: ColumnDefinition[] = [
   { title: 'Name', field: 'name', width: 150 },
   { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress' },
   { title: 'Favourite Color', field: 'color' },
@@ -148,7 +148,9 @@ export default class extends React.Component<IProps> {
           ref={ref => (this.ref = ref)}
           columns={columns}
           data={data}
-          rowClick={this.rowClick}
+          events={{
+            rowClick: this.rowClick  
+          }}
           options={options}
           data-custom-attr="test-custom-attribute"
           className="custom-css-class"

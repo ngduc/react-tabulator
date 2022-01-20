@@ -12,6 +12,9 @@ export interface ReactTabulatorOptions extends TabulatorTypes.Options {
   [k: string]: any
 };
 
+export interface ColumnDefinition extends TabulatorTypes.ColumnDefinition {
+};
+
 interface IState {
   data: any[];
   columns: any[];
@@ -58,6 +61,12 @@ export default class extends React.Component<IProps, Partial<IState>> {
     instance.on('dataLoaded', function () {
       that.props.dataLoaded ? that.props.dataLoaded() : '';
     });
+    if (this.props.events) {
+      Object.keys(this.props.events).forEach((eventName: string) => {
+        const handler = this.props.events[eventName];
+        instance.on(eventName, handler);
+      })
+    }
 
     // await table.setData(data);
     if (data && data.length > 0) {

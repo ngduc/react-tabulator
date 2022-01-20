@@ -6,6 +6,7 @@ const NOOPS = () => {};
 
 // TODO: add proper types for props & callbacks
 export interface IProps {
+  events?: any; // example: <ReactTabulator events={{ rowClick: (ev, row) => {} }}... />
   className?: string;
   columns: any[];
   data: any[];
