@@ -20,7 +20,7 @@ on change: setTableKey(`${Math.random()}`)
 
 # Live Examples
 
-*React-tabulator version may not be the latest in these examples.*
+*React-tabulator version may not be the latest in these examples. Feel free to open a PR to add your examples.*
 
 - Example - Live Demo: [Codesandbox](https://codesandbox.io/s/0mwpy612xw?module=/src/components/Home.js)
 - Example - Source code: [/src/ReactTabulatorExample.tsx](/src/ReactTabulatorExample.tsx)
@@ -42,6 +42,9 @@ Data:
 
 Edit:
 - Edit & get edited data - [Link](https://codesandbox.io/s/react-tabulator-examples-forked-ym0fs?file=/src/components/Home.js)
+
+Export:
+- Export to CSV file - please use this workaround: https://github.com/ngduc/react-tabulator/issues/76
 
 Support React v15.x (legacy, stopped support from 2021-01)
 - With React 15.x - [Link](https://codesandbox.io/s/react-tabulator-with-react-15-tppef?file=/src/components/Home.js)
