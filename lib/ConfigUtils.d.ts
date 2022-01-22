@@ -2,7 +2,7 @@ export interface IProps {
     events?: any;
     className?: string;
     columns: any[];
-    data: any[];
+    data?: any[];
     height?: number;
     layout?: string;
     layoutColumnsOnNewData?: boolean;

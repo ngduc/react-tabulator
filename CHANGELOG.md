@@ -1,8 +1,9 @@
-## [0.17.0] - 2022-01-18
+## [0.17.1] - 2022-01-18
 - BREAKING: upgraded tabulator-tables to 5.0.10
 - BREAKING: added "events" prop, callback props (like: rowClick) are now deprecated.
 - feat: added "checkOptions" prop: if set to true, it will rerender when options changed.
 - feat: added typescript types: ReactTabulatorOptions
+- fix: for pagination using scroll & ajaxURL
 - use pnpm instead of npm
 
 ## [0.16.1] - 2021-11-15

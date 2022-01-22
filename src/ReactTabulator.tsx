@@ -38,6 +38,9 @@ export default class extends React.Component<IProps, Partial<IState>> {
     const that = this;
     const { columns, data, options } = this.props;
     const propOptions = await propsToOptions(this.props);
+    if (data) {
+      propOptions.data = data;
+    }
 
     const instance = new Tabulator(domEle, {
       columns,
@@ -50,9 +53,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
       // dataLoaded() {
       //   that.props.dataLoaded ? that.props.dataLoaded() : '';
       // },
-      invalidOptionWarnings: false, // #102: disable console warnings for invalid table properties
-      ...options, // props.options are passed to Tabulator's options.
-      data
+      ...options // props.options are passed to Tabulator's options.
     });
     instance.on('tableBuilding', function () {
       that.table = this; // keep the table instance.

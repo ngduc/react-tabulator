@@ -9,7 +9,7 @@ export interface IProps {
   events?: any; // example: <ReactTabulator events={{ rowClick: (ev, row) => {} }}... />
   className?: string;
   columns: any[];
-  data: any[];
+  data?: any[];
   height?: number;
   layout?: string, /// layout type "fitColumns" | "fitDataTable" | "fitDataStretch" | "fitData" - default: "fitData"
 	layoutColumnsOnNewData?: boolean, // update column widths on setData - default: false
@@ -140,10 +140,10 @@ export const propsToOptions = async (props: any) => {
 
   const callbackNames = ['tableBuilt','rowClick','rowDblClick','rowContext','rowTap','rowDblTap','rowTapHold',
     'rowAdded','rowDeleted','rowMoved','rowUpdated','rowSelectionChanged','rowSelected','rowDeselected','rowResized',
-    'cellClick','cellDblClick','cellContext','cellTap','cellDblTap','cellTapHold','cellEditing','cellEdited','cellEditCancelled',
+    'cellClick','cellDblClick','cellContext','cellTap','cellDblTap','cellTapHold','cellEditing','cellEditCancelled',
     'columnMoved','columnResized','columnTitleChanged','columnVisibilityChanged',
-    'htmlImporting','htmlImported','dataLoading','dataLoaded','dataChanged',
-    'ajaxRequesting','ajaxResponse','ajaxError','dataFiltering','dataFiltered','dataSorting','dataSorted',
+    'htmlImporting','htmlImported','dataLoading','dataLoaded',
+    'ajaxRequesting','ajaxResponse','dataFiltering','dataFiltered','dataSorting','dataSorted',
     'renderStarted','renderComplete','pageLoaded','localized','dataGrouping','dataGrouped',
     'groupVisibilityChanged','groupClick','groupDblClick','groupContext','groupTap','groupDblTap','groupTapHold',
     'movableRowsSendingStart','movableRowsSent','movableRowsSentFailed','movableRowsSendingStop','movableRowsReceivingStart','movableRowsReceived','movableRowsReceivedFailed','movableRowsReceivingStop',
@@ -151,7 +151,9 @@ export const propsToOptions = async (props: any) => {
     'downloadReady','downloadComplete']; // don't add "selectableCheck" here, it will break "rowSelectionChanged"
   
   for (const callbackName of callbackNames) {
-    output[callbackName] = props[callbackName] || NOOPS
+    if (typeof props[callbackName] !== 'undefined') {
+      output[callbackName] = props[callbackName] || NOOPS
+    }
   }
   if (typeof props['footerElement'] === 'object') {
     // convert from JSX to HTML string (tabulator's footerElement accepts string)

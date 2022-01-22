@@ -103,37 +103,51 @@ export default class extends React.Component<IProps> {
       { title: 'Email', field: 'email', width: 150 },
     ]
     const options = {
-      height: 150,
+      height: 100,
       movableRows: true,
-      ajaxProgressiveLoad: 'scroll',
-      ajaxProgressiveLoadDelay: 200,
-      ajaxProgressiveLoadScrollMargin: 100,
+      progressiveLoad: 'scroll',
+      progressiveLoadDelay: 200,
+      progressiveLoadScrollMargin: 30,
       ajaxURL: 'https://reqres.in/api/users',
-      paginationDataSent: {
-        page: 'page',
-        size: 'per_page' // change 'size' param to 'per_page'
+      dataSendParams:{
+        page: "page",
+        size: "per_page",
       },
-      paginationDataReceived: {
-        last_page: 'total_pages'
+      dataReceiveParams:{
+        last_page: 'last'
       },
-      current_page: 1,
-      paginationSize: 3,
-      ajaxResponse: function(url: string, params, response) {
-        console.log('ajaxResponse', url);
-        return response; //return the response data to tabulator
+      paginationSize: 5,
+      ajaxResponse: (url, params, response) => {
+        console.log('url, params, response', url, params, response);
+        return {
+          data: response.data,
+          last: response.total_pages
+        };
       },
-      ajaxError: function(error) {
+      ajaxError: function (error) {
         console.log('ajaxError', error);
       }
-    }
+    };
     return (
       <ReactTabulator
-          ref={ref => (this.ref = ref)}
-          columns={columns}
-          data={[]}
-          options={options}
-        />
-    )
+        ref={(ref) => (this.ref = ref)}
+        columns={columns}
+        options={options}
+        events={{
+          dataLoaded: function (data) {
+            console.log('dataLoaded', data);
+            // return data; //return the response data to tabulator
+            let modResponse: any = {};
+            modResponse.data = data;
+            modResponse.last = 5;
+            return modResponse;
+          },
+          ajaxError: function (error) {
+            console.log('ajaxError', error);
+          }
+        }}
+      />
+    );
   }
 
   render() {
