@@ -87,7 +87,7 @@ export default class extends React.Component<IProps, Partial<IState>> {
   // This function will be ignored when running with React 15.6.x
   static getDerivedStateFromProps(props: any, state: any) {
     // console.log('- getDerivedStateFromProps', props, state);
-    const noData = !props.data || props.data.length === 0;
+    const noData = !props.data || (props?.data || []).length === 0;
     if (!state && noData) {
       // first time (similar to: componentWillMount)
       return null;
@@ -108,10 +108,10 @@ export default class extends React.Component<IProps, Partial<IState>> {
       if (
         !isSameArray(state.data, props.data) ||
         !isSameArray(state.columns, props.columns) ||
-        (props.checkOptions === true && !isSameObject(state.options, props.options))
+        (props?.checkOptions === true && state.options && !isSameObject(state.options, props.options))
       ) {
         // console.log('data changed!');
-        return { ...state, data: [...props.data], columns: [...props.columns], options: { ...props.options } };
+        return { ...state, data: [...(props?.data || [])], columns: [...props?.columns], options: { ...props?.options } };
       }
     }
     return {};

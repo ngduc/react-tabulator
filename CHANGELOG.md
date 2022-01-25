@@ -1,3 +1,6 @@
+## [0.17.2] - 2022-01-24
+- fix: async set data.
+
 ## [0.17.1] - 2022-01-18
 - BREAKING: upgraded tabulator-tables to 5.0.10
 - BREAKING: added "events" prop, callback props (like: rowClick) are now deprecated.

@@ -95,6 +95,10 @@ export default class extends React.Component<IProps> {
   clearData = () => {
     this.setState({ data: [] });
   };
+  modifyData = () => {
+    const _newData = data.filter((item: any) => item.name === 'Oli Bob');
+    this.setState({ data: _newData });
+  }
 
   renderAjaxScrollExample = () => {
     const columns = [
@@ -175,7 +179,8 @@ export default class extends React.Component<IProps> {
 
         <h3>
           Asynchronous data: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>{' '}
-          <button onClick={this.clearData}>Clear</button>
+          <button onClick={this.clearData}>Clear</button>{' '}
+          <button onClick={this.modifyData}>Modify Data</button>
         </h3>
         <ReactTabulator columns={columns} data={this.state.data} />
 
