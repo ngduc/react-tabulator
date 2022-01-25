@@ -13,7 +13,15 @@ export interface ReactTabulatorOptions extends TabulatorTypes.Options {
 
 export interface ColumnDefinition extends TabulatorTypes.ColumnDefinition {}
 
-const ReactTabulator = (props: any) => {
+export interface ReactTabulatorProps {
+  columns?: ColumnDefinition[];
+  options?: any;
+  events?: any;
+  onRef?: (ref: any) => void
+  [k: string]: any;
+}
+
+const ReactTabulator = (props: ReactTabulatorProps) => {
   const ref = React.useRef();
   const instanceRef = React.useRef();
   const [mainId, setMainId] = React.useState(`tabulator-${+new Date()}-${Math.floor(Math.random() * 9999999)}`);
@@ -43,14 +51,16 @@ const ReactTabulator = (props: any) => {
         (instanceRef.current as any).on(eventName, handler);
       });
     }
+    props.onRef && props.onRef(instanceRef);
   };
 
   React.useEffect(() => {
+    // console.log('useEffect - onmount');
     initTabulator();
   }, []);
 
   React.useEffect(() => {
-    console.log('instanceRef.current', instanceRef.current);
+    // console.log('useEffect - props.data changed');
     if (instanceRef && instanceRef.current) {
       initTabulator(); // re-init table
     }

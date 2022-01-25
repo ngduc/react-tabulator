@@ -1,5 +1,7 @@
-## [0.18.0] - 2022-01-24
+## [0.18.1] - 2022-01-24
 - BREAKING: refactor: major refactor: useEffect, useState.
+- BREAKING: changed 'ref' prop to 'onRef' prop (see ReactTabulatorExample.tsx)
+- refactor: ReactTabulatorExample.tsx
 
 ## [0.17.1] - 2022-01-18
 - BREAKING: upgraded tabulator-tables to 5.0.10

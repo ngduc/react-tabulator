@@ -5,5 +5,12 @@ export interface ReactTabulatorOptions extends TabulatorTypes.Options {
 }
 export interface ColumnDefinition extends TabulatorTypes.ColumnDefinition {
 }
-declare const ReactTabulator: (props: any) => JSX.Element;
+export interface ReactTabulatorProps {
+    columns?: ColumnDefinition[];
+    options?: any;
+    events?: any;
+    onRef?: (ref: any) => void;
+    [k: string]: any;
+}
+declare const ReactTabulator: (props: ReactTabulatorProps) => JSX.Element;
 export default ReactTabulator;

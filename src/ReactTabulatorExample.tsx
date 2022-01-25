@@ -11,10 +11,10 @@ import MultiValueFormatter from './formatters/MultiValueFormatter';
 
 import { reactFormatter } from './Utils';
 
-function SimpleButton (props: any) {
+function SimpleButton(props: any) {
   const rowData = props.cell._cell.row.data;
   const cellValue = props.cell._cell.value || 'Edit | Show';
-  return <button onClick={() => alert(rowData.name)}>{cellValue}</button>
+  return <button onClick={() => alert(rowData.name)}>{cellValue}</button>;
 }
 
 const columns: ColumnDefinition[] = [
@@ -24,7 +24,7 @@ const columns: ColumnDefinition[] = [
   { title: 'Date Of Birth', field: 'dob', sorter: 'date' },
   { title: 'Rating', field: 'rating', hozAlign: 'center', formatter: 'star' },
   { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross' },
-  { title: 'Custom', field: 'custom', hozAlign: 'center', editor: 'input', formatter: reactFormatter(<SimpleButton />) },
+  { title: 'Custom', field: 'custom', hozAlign: 'center', editor: 'input', formatter: reactFormatter(<SimpleButton />) }
 ];
 const data = [
   { id: 1, name: 'Oli Bob', age: '12', color: 'red', dob: '01/01/1980', rating: 5, passed: true, pets: ['cat', 'dog'] },
@@ -47,10 +47,14 @@ const data = [
 
 // Editable Example:
 const colorOptions = { ['']: '&nbsp;', red: 'red', green: 'green', yellow: 'yellow' };
-const petOptions = [{ id: 'cat', name: 'cat' }, { id: 'dog', name: 'dog' }, { id: 'fish', name: 'fish' }];
-const editableColumns = [
+const petOptions = [
+  { id: 'cat', name: 'cat' },
+  { id: 'dog', name: 'dog' },
+  { id: 'fish', name: 'fish' }
+];
+const editableColumns: any[] = [
   { title: 'Name', field: 'name', width: 150, editor: 'input', headerFilter: 'input' },
-  { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress', editor: 'progress' },
+  { title: 'Age', field: 'age', hozAlign: 'left', formatter: 'progress', editor: 'star' },
   {
     title: 'Favourite Color',
     field: 'color',
@@ -72,40 +76,37 @@ const editableColumns = [
   { title: 'Passed?', field: 'passed', hozAlign: 'center', formatter: 'tickCross', editor: true }
 ];
 
-interface IProps {
-  data: any[];
-}
-
-export default class extends React.Component<IProps> {
-  state: any = {
+export default () => {
+  const [state, setState] = React.useState<any>({
     data: [],
     selectedName: ''
-  };
-  ref: any = null;
+  });
+  let ref = React.useRef<any>();
 
-  rowClick = (e: any, row: any) => {
-    console.log('ref table: ', this.ref.table); // this is the Tabulator table instance
+  const rowClick = (e: any, row: any) => {
+    console.log('ref table: ', ref.current); // this is the Tabulator table instance
+    // ref?.current && ref?.current.replaceData([])
     console.log('rowClick id: ${row.getData().id}', row, e);
-    this.setState({ selectedName: row.getData().name });
+    setState({ selectedName: row.getData().name });
   };
 
-  setData = () => {
-    this.setState({ data });
+  const setData = () => {
+    setState({ data });
   };
-  clearData = () => {
-    this.setState({ data: [] });
+  const clearData = () => {
+    setState({ data: [] });
   };
-  modifyData = () => {
+  const modifyData = () => {
     const _newData = data.filter((item: any) => item.name === 'Oli Bob');
-    this.setState({ data: _newData });
-  }
+    setState({ data: _newData });
+  };
 
-  renderAjaxScrollExample = () => {
+  const renderAjaxScrollExample = () => {
     const columns = [
       { title: 'First Name', field: 'first_name', width: 150 },
       { title: 'Last Name', field: 'last_name', width: 150 },
-      { title: 'Email', field: 'email', width: 150 },
-    ]
+      { title: 'Email', field: 'email', width: 150 }
+    ];
     const options = {
       height: 100,
       movableRows: true,
@@ -113,11 +114,11 @@ export default class extends React.Component<IProps> {
       progressiveLoadDelay: 200,
       progressiveLoadScrollMargin: 30,
       ajaxURL: 'https://reqres.in/api/users',
-      dataSendParams:{
-        page: "page",
-        size: "per_page",
+      dataSendParams: {
+        page: 'page',
+        size: 'per_page'
       },
-      dataReceiveParams:{
+      dataReceiveParams: {
         last_page: 'last'
       },
       paginationSize: 5,
@@ -134,7 +135,7 @@ export default class extends React.Component<IProps> {
     };
     return (
       <ReactTabulator
-        ref={(ref) => (this.ref = ref)}
+        onRef={(r) => (ref = r)}
         columns={columns}
         options={options}
         events={{
@@ -152,62 +153,59 @@ export default class extends React.Component<IProps> {
         }}
       />
     );
-  }
+  };
 
-  render() {
-    const options: ReactTabulatorOptions = {
-      height: 150,
-      movableRows: true,
-      movableColumns: true
-    };
-    return (
-      <div>
-        <ReactTabulator
-          ref={ref => (this.ref = ref)}
-          columns={columns}
-          data={data}
-          events={{
-            rowClick: this.rowClick  
-          }}
-          options={options}
-          data-custom-attr="test-custom-attribute"
-          className="custom-css-class"
-        />
-        <i>
-          Selected Name: <strong>{this.state.selectedName}</strong>
-        </i>
+  const options: ReactTabulatorOptions = {
+    height: 150,
+    movableRows: true,
+    movableColumns: true
+  };
+  return (
+    <div>
+      <ReactTabulator
+        onRef={(ref) => (ref = ref)}
+        columns={columns}
+        data={data}
+        events={{
+          rowClick: rowClick
+        }}
+        options={options}
+        data-custom-attr="test-custom-attribute"
+        className="custom-css-class"
+      />
+      <i>
+        Selected Name: <strong>{state.selectedName}</strong>
+      </i>
 
-        <h3>
-          Asynchronous data: (e.g. fetch) - <button onClick={this.setData}>Set Data</button>{' '}
-          <button onClick={this.clearData}>Clear</button>{' '}
-          <button onClick={this.modifyData}>Modify Data</button>
-        </h3>
-        <ReactTabulator columns={columns} data={this.state.data} />
+      <h3>
+        Asynchronous data: (e.g. fetch) - <button onClick={setData}>Set Data</button>{' '}
+        <button onClick={clearData}>Clear</button> <button onClick={modifyData}>Modify Data</button>
+      </h3>
+      <ReactTabulator columns={columns} data={state.data} />
 
-        <h3>Editable Table</h3>
-        <ReactTabulator
-          columns={editableColumns}
-          data={data}
-          cellEdited={(cell: any) => console.log('cellEdited', cell)}
-          dataChanged={(newData: any) => console.log('dataChanged', newData)}
-          footerElement={<span>Footer</span>}
-          options={{ movableColumns: true, movableRows: true }}
-        />
+      <h3>Editable Table</h3>
+      <ReactTabulator
+        columns={editableColumns}
+        data={data}
+        cellEdited={(cell: any) => console.log('cellEdited', cell)}
+        dataChanged={(newData: any) => console.log('dataChanged', newData)}
+        footerElement={<span>Footer</span>}
+        options={{ movableColumns: true, movableRows: true }}
+      />
 
-        <h3>Infinite Scrolling with Ajax Requests</h3>
-        {this.renderAjaxScrollExample()}
+      <h3>Infinite Scrolling with Ajax Requests</h3>
+      {renderAjaxScrollExample()}
 
-        <p>
-          <a href="https://github.com/ngduc/react-tabulator" target="_blank">
-            Back to: Github Repo: react-tabulator
-          </a>
-        </p>
-        <p>
-          <a href="http://tabulator.info/examples/4.0" target="_blank">
-            More Tabulator's Examples
-          </a>
-        </p>
-      </div>
-    );
-  }
-}
+      <p>
+        <a href="https://github.com/ngduc/react-tabulator" target="_blank">
+          Back to: Github Repo: react-tabulator
+        </a>
+      </p>
+      <p>
+        <a href="http://tabulator.info/examples/4.0" target="_blank">
+          More Tabulator's Examples
+        </a>
+      </p>
+    </div>
+  );
+};
