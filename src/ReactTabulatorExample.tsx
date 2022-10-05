@@ -135,7 +135,7 @@ export default () => {
     };
     return (
       <ReactTabulator
-        onRef={(r) => (ref = r)}
+        onRef={(r) => (ref.current = r.current)}
         columns={columns}
         options={options}
         events={{
@@ -163,7 +163,7 @@ export default () => {
   return (
     <div>
       <ReactTabulator
-        onRef={(ref) => (ref = ref)}
+        onRef={(ref) => (ref.current = ref.current)}
         columns={columns}
         data={data}
         events={{
