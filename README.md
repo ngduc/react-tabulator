@@ -52,6 +52,7 @@ Require: `NodeJS`
 
 ```
 $ npm install --legacy-peer-deps        install dependencies for development.
+$ export NODE_OPTIONS=--openssl-legacy-provider     to work with Node 18+
 $ npm run dev      Launch DEV mode (with hot reload).
 $ npm run build    Make a build.
 

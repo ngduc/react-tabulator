@@ -1,6 +1,6 @@
 {
   "name": "react-tabulator",
-  "version": "0.18.1",
+  "version": "0.19.0",
   "description": "React Tabulator is based on tabulator - a JS table library with many advanced features.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -41,12 +41,13 @@
   },
   "homepage": "https://github.com/ngduc/react-tabulator#readme",
   "dependencies": {
+    "@types/babel__traverse": "^7.17.1",
     "@types/react-tag-autocomplete": "^5.6.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.3.1",
     "es6-promise": "^4.2.8",
     "pick-react-known-prop": "^0.1.5",
     "react-tag-autocomplete": "^5.7.1",
-    "tabulator-tables": "5.0.10"
+    "tabulator-tables": "5.5.2"
   },
   "peerDependencies": {
     "react": ">=15.6.2 || ^16.0.0 || ^17.0.0",
@@ -57,7 +58,7 @@
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.9",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^29.6.4",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "concurrently": "^5.0.0",
     "cross-env": "^7.0.2",
@@ -65,9 +66,9 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "event-stream": "4.0.1",
     "faker": "^4.1.0",
-    "jest": "^23.6.0",
-    "jest-puppeteer": "^4.3.0",
-    "nwb": "^0.23.0",
+    "jest": "^29.6.4",
+    "jest-puppeteer": "^9.0.0",
+    "nwb": "^0.25.2",
     "puppeteer": "^5.5.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
