@@ -1,3 +1,6 @@
+## [0.19.0] - 2023-09-04
+- upgraded tabulator-tables to 5.5.2
+
 ## [0.18.1] - 2022-01-24
 - BREAKING: refactor: major refactor: useEffect, useState.
 - BREAKING: changed 'ref' prop to 'onRef' prop (see ReactTabulatorExample.tsx)
