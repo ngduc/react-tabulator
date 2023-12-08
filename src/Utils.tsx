@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from "react-dom/client";
 
 export function clone(obj: any) {
   return JSON.parse(JSON.stringify(obj));
@@ -38,27 +38,18 @@ export function isSameObject(a: any, b: any) {
   return JSON.stringify(a, stringifyCensor(a)) === JSON.stringify(b, stringifyCensor(b));
 }
 
-export function reactFormatter(JSX: any) {
-  return function customFormatter(cell: any, formatterParams: any, onRendered: (callback: () => void) => void) {
-    // cell - the cell component
-    // formatterParams - parameters set for the column
-    // onRendered - function to call when the formatter has been rendered
-    const renderFn = () => {
-      const cellEl = cell.getElement();
-      if (cellEl) {
-        const formatterCell = cellEl.querySelector('.formatterCell');
-        if (formatterCell) {
-          const CompWithMoreProps = React.cloneElement(JSX, { cell });
-          render(CompWithMoreProps, cellEl.querySelector('.formatterCell'));
-        }
-      }
+function reactFormatter(JSX: any) {
+    return function customFormatter(
+      cell: any,
+      formatterParams: any,
+      onRendered: (callback: () => void) => void
+    ) {
+      onRendered(() => {
+        const cellEl = cell.getElement();
+        const root = createRoot(cellEl);
+        root.render(JSX);
+      });
+      
+      return "<div class='formatterCell'></div>";
     };
-
-    onRendered(renderFn); // initial render only.
-
-    setTimeout(() => {
-      renderFn(); // render every time cell value changed.
-    }, 0);
-    return '<div class="formatterCell"></div>';
-  };
-}
+  }
