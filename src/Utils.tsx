@@ -38,7 +38,7 @@ export function isSameObject(a: any, b: any) {
   return JSON.stringify(a, stringifyCensor(a)) === JSON.stringify(b, stringifyCensor(b));
 }
 
-function reactFormatter(JSX: any) {
+export function reactFormatter(JSX: any) {
     return function customFormatter(
       cell: any,
       formatterParams: any,
