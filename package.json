@@ -46,7 +46,7 @@
     "date-fns": "v2.0.0-alpha.25",
     "dotenv": "^8.2.0",
     "pick-react-known-prop": "^0.1.5",
-    "react-tag-autocomplete": "^5.7.1",
+    "react-tag-autocomplete": "^7.2.0",
     "tabulator-tables": "^4.4.3"
   },
   "peerDependencies": {
