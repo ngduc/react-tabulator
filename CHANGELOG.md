@@ -1,3 +1,6 @@
+## [0.20.3] - 2024-07-27
+- upgraded tabulator-tables to 5.6.1
+
 ## [0.19.0] - 2023-09-04
 - upgraded tabulator-tables to 5.5.2
 

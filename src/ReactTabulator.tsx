@@ -4,7 +4,10 @@ import { pickHTMLProps } from 'pick-react-known-prop';
 import { propsToOptions } from './ConfigUtils';
 
 /* tslint:disable-next-line */
+// import * as Tabulator_Import from 'tabulator-tables';
+// const { TabulatorFull: Tabulator } = Tabulator_Import;
 import { TabulatorFull as Tabulator } from 'tabulator-tables';
+
 import { Tabulator as TabulatorTypes } from './types/TabulatorTypes';
 
 export interface ReactTabulatorOptions extends TabulatorTypes.Options {
@@ -23,7 +26,7 @@ export interface ReactTabulatorProps {
 
 const ReactTabulator = (props: ReactTabulatorProps) => {
   const ref = React.useRef();
-  const instanceRef = React.useRef();
+  const instanceRef: any = React.useRef();
   const [mainId, setMainId] = React.useState(`tabulator-${+new Date()}-${Math.floor(Math.random() * 9999999)}`);
 
   let htmlProps;
