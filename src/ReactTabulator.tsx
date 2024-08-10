@@ -71,8 +71,8 @@ const ReactTabulator = (props: ReactTabulatorProps) => {
 
   React.useEffect(() => {
     // console.log('useEffect - props.data changed');
-    if (instanceRef && instanceRef.current) {
-      initTabulator(); // re-init table
+    if (instanceRef?.current) {
+      initTabulator();
     }
   }, [props.data]);
 
