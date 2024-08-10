@@ -1,4 +1,4 @@
-export declare type I18nSettings = {
+export type I18nSettings = {
     amPm: [string, string];
     dayNames: Days;
     dayNamesShort: Days;
@@ -6,9 +6,9 @@ export declare type I18nSettings = {
     monthNamesShort: Months;
     DoFn(dayOfMonth: number): string;
 };
-export declare type I18nSettingsOptional = Partial<I18nSettings>;
-export declare type Days = [string, string, string, string, string, string, string];
-export declare type Months = [string, string, string, string, string, string, string, string, string, string, string, string];
+export type I18nSettingsOptional = Partial<I18nSettings>;
+export type Days = [string, string, string, string, string, string, string];
+export type Months = [string, string, string, string, string, string, string, string, string, string, string, string];
 export declare function assign<A>(a: A): A;
 export declare function assign<A, B>(a: A, b: B): A & B;
 export declare function assign<A, B, C>(a: A, b: B, c: C): A & B & C;

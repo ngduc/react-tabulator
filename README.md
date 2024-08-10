@@ -53,6 +53,7 @@ Require: `NodeJS`
 ```
 $ npm install --legacy-peer-deps        install dependencies for development.
 $ export NODE_OPTIONS=--openssl-legacy-provider     to work with Node 18+
+$ export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true     to work with ARM if you haven't chromium installed
 $ npm run dev      Launch DEV mode (with hot reload).
 $ npm run build    Make a build.
 

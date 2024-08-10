@@ -14,6 +14,6 @@ export default class extends React.Component<IProps, Partial<IState>> {
     componentWillUnmount(): void;
     componentWillReceiveProps(props: IProps): void;
     pickValidHTMLProps: () => void;
-    render(): JSX.Element;
+    render(): React.JSX.Element;
 }
 export {};

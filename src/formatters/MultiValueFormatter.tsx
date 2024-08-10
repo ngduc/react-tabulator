@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import {createRoot} from "react-dom/client";
 
 const createCellEl = () => {
   const el = document.createElement('div');
@@ -30,6 +30,7 @@ export default function(cell: any, formatterParams: any, onRendered: (fn: any) =
   const el = createCellEl();
   el.className = 'multi-value-formatter-content';
   el.title = arr && arr.length > 0 && typeof arr[0] === 'string' ? arr.join(', ') : '';
-  render(content, el);
+  const root = createRoot(el);
+  root.render(content);
   return el;
 }
