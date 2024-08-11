@@ -35,7 +35,7 @@ const ReactTabulator = (props: ReactTabulatorProps) => {
   delete htmlProps['columns'];
 
   const initTabulator = async () => {
-    const domEle: any = ReactDOM.findDOMNode(ref.current); // mounted DOM element
+    const domEle: any = ref.current; // Directly access the DOM element
     const { columns, data, options } = props;
     const propOptions = await propsToOptions(props);
     if (data) {
@@ -60,12 +60,19 @@ const ReactTabulator = (props: ReactTabulatorProps) => {
   React.useEffect(() => {
     // console.log('useEffect - onmount');
     initTabulator();
+
+    // Cleanup function to destroy Tabulator instance on unmount
+    return () => {
+      if (instanceRef.current) {
+        instanceRef.current.destroy();
+      }
+    };
   }, []);
 
   React.useEffect(() => {
     // console.log('useEffect - props.data changed');
-    if (instanceRef && instanceRef.current) {
-      initTabulator(); // re-init table
+    if (instanceRef?.current) {
+      initTabulator();
     }
   }, [props.data]);
 

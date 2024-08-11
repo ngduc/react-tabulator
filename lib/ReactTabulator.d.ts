@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import * as React from 'react';
 import { Tabulator as TabulatorTypes } from './types/TabulatorTypes';
 export interface ReactTabulatorOptions extends TabulatorTypes.Options {
     [k: string]: any;
@@ -12,5 +12,5 @@ export interface ReactTabulatorProps {
     onRef?: (ref: any) => void;
     [k: string]: any;
 }
-declare const ReactTabulator: (props: ReactTabulatorProps) => JSX.Element;
+declare const ReactTabulator: (props: ReactTabulatorProps) => React.JSX.Element;
 export default ReactTabulator;

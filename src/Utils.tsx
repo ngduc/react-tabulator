@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import {createRoot} from "react-dom/client";
 
 export function clone(obj: any) {
   return JSON.parse(JSON.stringify(obj));
@@ -49,7 +50,17 @@ export function reactFormatter(JSX: any) {
         const formatterCell = cellEl.querySelector('.formatterCell');
         if (formatterCell) {
           const CompWithMoreProps = React.cloneElement(JSX, { cell });
-          render(CompWithMoreProps, cellEl.querySelector('.formatterCell'));
+
+
+          // Create a root for the formatterCell if it doesn't already have one
+          let root = formatterCell._reactRoot;
+          if (!root) {
+            root = createRoot(formatterCell);
+            formatterCell._reactRoot = root; // Store the root for potential future re-renders
+          }
+
+          // Render the component
+          root.render(CompWithMoreProps);
         }
       }
     };

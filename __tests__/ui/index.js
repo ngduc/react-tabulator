@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-
+import { createRoot } from 'react-dom/client';
 import '../../src/styles.css';
 import { ReactTabulator } from '../../lib';
 
@@ -45,4 +44,6 @@ class Demo extends Component {
   }
 }
 
-render(<Demo />, document.querySelector('#app'));
+const rootElement = document.querySelector('#app');
+const root = createRoot(rootElement);
+root.render(<Demo />);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 import '../../styles.css'; // required styles
@@ -21,4 +21,9 @@ class Demo extends Component {
   }
 }
 
-render(<Demo />, document.querySelector('#demo'));
+// Get the root element from the DOM
+const rootElement = document.querySelector('#demo');
+
+// Create a root and render your app
+const root = createRoot(rootElement);
+root.render(<Demo />);

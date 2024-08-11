@@ -10,7 +10,7 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
       },
       module: {
-        rules: [{ test: /\.(ts|tsx?)$/, loader: 'awesome-typescript-loader' }]
+        rules: [{ test: /\.(ts|tsx?)$/, loader: 'ts-loader' }]
       }
     },
     html: {
