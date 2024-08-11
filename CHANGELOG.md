@@ -1,3 +1,6 @@
+## [0.21.0] - 2024-08-01
+- support react 18 (Thanks @sylwit): [PR #294](https://github.com/ngduc/react-tabulator/pull/294)
+
 ## [0.20.3] - 2024-07-27
 - upgraded tabulator-tables to 5.6.1
 
