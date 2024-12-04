@@ -1366,6 +1366,7 @@ declare namespace Tabulator {
         | 'tickCross'
         | 'star'
         | 'select'
+        | 'list'
         | 'autocomplete'
         | ((
               cell: CellComponent,
