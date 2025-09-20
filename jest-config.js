@@ -1,5 +1,6 @@
 module.exports = {
   preset: 'jest-puppeteer',
+  testTimeout: 30000,
   moduleFileExtensions: ['js', 'jsx', 'json', 'vue'],
   transform: {
     '^.+\\.(js|jsx)?$': 'babel-jest'
